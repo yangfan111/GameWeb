@@ -1,0 +1,48 @@
+{
+    "ServerList" : [
+
+    	{
+            "gameServerCode":1,
+            "gameServerName" : "Wildest Dreams",
+            "url":"https://wd-cb.shinezone.com"
+        },
+
+        {
+            "gameServerCode":2,
+            "gameServerName" : "public",
+            "url":"http://172.16.0.242:8360"
+ 
+        },
+        {
+            "gameServerCode":3,
+            "gameServerName" : "public test",
+            "url":"http://172.16.0.242:8361"
+  
+        },
+        {
+            "gameServerCode":4,
+            "gameServerName" : "dev_yf",
+            "url":"http://172.16.50.125:8360"
+
+        },
+        {
+            "gameServerCode":5,
+            "gameServerName" : "dev_ss",
+            "url":"http://172.16.51.175:8360"
+      
+        },
+        {
+            "gameServerCode":6,
+            "gameServerName" : "test_lc",
+            "url":"http://172.16.50.32:8360"
+
+        },
+        {
+            "gameServerCode":7,
+            "gameServerName" : "dev_xwj",
+            "url":"http://172.16.52.102:8360"
+
+        }
+
+    ]
+}
