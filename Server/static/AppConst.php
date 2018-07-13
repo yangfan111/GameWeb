@@ -29,8 +29,11 @@ class ServerState
 }
 class GMMsgCMD
 {
-
+	//服务器管理
 	 const GAME_SERVER_LIST = 'server_getGameServerList';
 	 const CHANGE_SERVER_STATE = 'server_changeGameServerState';
+	 //功能管理
+	 const TOGGLE_SERVER_FUNC = 'func_changeGameServerState';
+	 const TOGGLE_SERVER_FUNC = 'func_changeGameServerState';
 	
 }

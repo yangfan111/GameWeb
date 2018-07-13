@@ -10,7 +10,7 @@
 		Util::arrayToSpecificObject($methodArr, '',$this);
 		$this->argNames = $argNames;
 	}
-	function call($argArr)
+	public function call($argArr)
 	{
 		if(isset($this->classObj))
 		{

@@ -5,21 +5,30 @@ class GM_CMDMgr{
 
 	private $handlerMap = array();//处理接口
 
-	private $serverData; //服务器数据实例
+	public $serverData; //服务器数据实例
 
 	public  function register(){
+		$handlerClass = 'GM_CMDHandler';
 		$this->handlerMap[ GMMsgCMD::GAME_SERVER_LIST]  = new GM_OpObject(
-		array('classObj'=>'GM_OpObject','methodName'=>'handleGameServerListReq'),
-		array('gameAppId'));
+			array('classObj'=>$handlerClass,'methodName'=>'handleGameServerListReq'),
+			array('gameAppId'));
 		$this->handlerMap[ GMMsgCMD::CHANGE_SERVER_STATE]  = new GM_OpObject(
-		array('classObj'=>'GM_OpObject','methodName'=>'handleGameServerStateReq'),
-		array('gameAppId','gameServerCode','gameServerState'));
+			array('classObj'=>$handlerClass,'methodName'=>'handleGameServerStateReq'),
+			array('gameAppId','gameServerCode','gameServerState'));
+		$this->handlerMap[ GMMsgCMD::TOGGLE_SERVER_FUNC]  = new GM_OpObject(
+			array('classObj'=>$handlerClass,'methodName'=>'handleGameFunctionStateReq'),
+			array('gameAppId','functionCode','state','defaultState','serverCodeList','channelCodeList'));
+		$this->handlerMap[ GMMsgCMD::TOGGLE_SERVER_FUNC]  = new GM_OpObject(
+			array('classObj'=>$handlerClass,'methodName'=>'handleGameFunctionStateReq'),
+			array('gameAppId','functionCode','state','defaultState','serverCodeList','channelCodeList'));
+		
 
 
 	}
 	function __construct(){
 		$this->register();
-		$this->serverData = new ServerData();
+		$this->init();
+
 	}
 	public function checkCMD($gmObject){
 		if (!isset($this->handlerMap[$gmObject['action']]))
@@ -40,16 +49,23 @@ class GM_CMDMgr{
 	public  function handleGMCmd($gmObject)
 	{
 		$handlerObject = $this->handlerMap[$gmObject['action']] ;
-		$res = $handlerObject->processFunc($gmObject['data'],$this);
-		if(!isset($res)){
+		$ret = $handlerObject->processFunc($gmObject['data'],$this);
+		if(!isset($ret)){
 			return;
 		}
+		return $ret;
 		//TODO:执行完成后处理
 
 	}
-	public function initConfig(){
+	public function init()
+	{
+		$this->initConfig();
+	}
+	private function initConfig(){
+
 		$serverDataArr = Util::jsonFileDecode(API_ROOT . AppConst::SERVER_CONFIG);
-		$this->serverData->initServerList($serverDataArr);
+		$this->serverData = new ServerData($serverDataArr);
+
 	}
 
 }
@@ -58,11 +74,21 @@ class GM_CMDMgr{
 class GM_CMDHandler
 {
 
-	public static function handleGameServerListReq($gmData,GM_Mgr $gm_Mgr){
+	public static function handleGameServerListReq($gmData,GM_CMDMgr $gm_Mgr){
+		$serverList = $gm_Mgr->serverData->getGMServerList();
+		return $serverList;
 
 	}
-	public static function handleGameServerStateReq($gmData,GM_Mgr $gm_Mgr){
-
+	public static function handleGameServerStateReq($gmData,GM_CMDMgr $gm_Mgr){
+	}
+	public static function handleGameFunctionStateReq($gmData,GM_CMDMgr $gm_Mgr)
+	{
+		
+	}
+	
+public static function handleGameFunctionStateReq($gmData,GM_CMDMgr $gm_Mgr)
+	{
+		
 	}
 }
 
