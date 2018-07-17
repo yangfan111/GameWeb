@@ -32,8 +32,13 @@ class ServerInfo
 			'gameServerState'=> $this->gameServerState,
 		);
 	}
-	
 
+
+	function getAbc($name,$arrABC)
+	{
+		
+	}
+	
 }
 
 

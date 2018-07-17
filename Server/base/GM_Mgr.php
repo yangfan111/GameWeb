@@ -10,21 +10,22 @@ class GM_CMDMgr{
 	public  function register(){
 		$handlerClass = 'GM_CMDHandler';
 		$this->handlerMap[ GMMsgCMD::GAME_SERVER_LIST]  = new GM_OpObject(
-			array('classObj'=>$handlerClass,'methodName'=>'handleGameServerListReq'),
-			array('gameAppId'));
+		array('classObj'=>$handlerClass,'methodName'=>'handleGameServerListReq'),
+		array('gameAppId'));
 		$this->handlerMap[ GMMsgCMD::CHANGE_SERVER_STATE]  = new GM_OpObject(
-			array('classObj'=>$handlerClass,'methodName'=>'handleGameServerStateReq'),
-			array('gameAppId','gameServerCode','gameServerState'));
+		array('classObj'=>$handlerClass,'methodName'=>'handleGameServerStateReq'),
+		array('gameAppId','gameServerCode','gameServerState'));
 		$this->handlerMap[ GMMsgCMD::TOGGLE_SERVER_FUNC]  = new GM_OpObject(
-			array('classObj'=>$handlerClass,'methodName'=>'handleGameFunctionStateReq'),
-			array('gameAppId','functionCode','state','defaultState','serverCodeList','channelCodeList'));
+		array('classObj'=>$handlerClass,'methodName'=>'handleGameFunctionStateReq'),
+		array('gameAppId','functionCode','state','defaultState','serverCodeList','channelCodeList'));
 		$this->handlerMap[ GMMsgCMD::TOGGLE_SERVER_FUNC]  = new GM_OpObject(
-			array('classObj'=>$handlerClass,'methodName'=>'handleGameFunctionStateReq'),
-			array('gameAppId','functionCode','state','defaultState','serverCodeList','channelCodeList'));
-		
+		array('classObj'=>$handlerClass,'methodName'=>'handleGameFunctionStateReq'),
+		array('gameAppId','functionCode','state','defaultState','serverCodeList','channelCodeList'));
+
 
 
 	}
+
 	function __construct(){
 		$this->register();
 		$this->init();
@@ -61,6 +62,7 @@ class GM_CMDMgr{
 	{
 		$this->initConfig();
 	}
+
 	private function initConfig(){
 
 		$serverDataArr = Util::jsonFileDecode(API_ROOT . AppConst::SERVER_CONFIG);
@@ -79,16 +81,17 @@ class GM_CMDHandler
 		return $serverList;
 
 	}
+
 	public static function handleGameServerStateReq($gmData,GM_CMDMgr $gm_Mgr){
 	}
 	public static function handleGameFunctionStateReq($gmData,GM_CMDMgr $gm_Mgr)
 	{
-		
+
 	}
-	
-public static function handleGameFunctionStateReq($gmData,GM_CMDMgr $gm_Mgr)
+
+	public static function handleGameFunctionStateReq($gmData,GM_CMDMgr $gm_Mgr)
 	{
-		
+
 	}
 }
 

@@ -28,10 +28,13 @@ class ErrorObject
 
 	function __tostring() {
 
+
 		return $this->toString();
 	}
 	function toString()
 	{
+
+
 		return json_encode($this);
 	}
 }

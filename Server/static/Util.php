@@ -32,10 +32,13 @@ class Util{
 	//file to  decode array
 	public static function jsonFileDecode($filePath)
 	{
-	  $fileRawData = file_get_contents($filePath);
+	  $fileRawData = file_get_contents($filePath);	
 	  return json_decode($fileRawData);
 	}
-	
+	/**
+	 * @param  	
+	 * @return [type]
+	 */
 	public static function getFunctionReflectInfo($funcRef)
 	{
 	 	$funcReflection = new \ReflectionFunction($funcRef);	
@@ -45,6 +48,12 @@ class Util{
 	{
 		call_user_func(array($className,$methodName),$argArr);	
 	}
+	/**
+	 * @param  [type]
+	 * @param  [type]
+	 * @param  [type]
+	 * @return [type]
+	 */
 	public static function callInstanceMethod($classObject,$methodName,$argArr)
 	{
 		call_user_func(array($classObject,$methodName), $argArr);

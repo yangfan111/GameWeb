@@ -1,4 +1,5 @@
 <?php
+
     class GM_OpObject{
 
 	//  public $cmdName;//命令
@@ -9,17 +10,27 @@
 	function __construct($methodArr, $argNames) {
 		Util::arrayToSpecificObject($methodArr, '',$this);
 		$this->argNames = $argNames;
-	}
+	} 
+
 	public function call($argArr)
 	{
 		if(isset($this->classObj))
 		{
 			Util::callInstanceMethod($this->classObject, $this->methodName,$argArr);
-		}
+		} 
 		else{
 			Util::callStaticMethod($this->className, $this->$methodName, $argArr);
 		}
+	}	
+	/**
+	 * @param  [type]
+	 * @param  [type]
+	 * @return [type]		
+	 */							
+	public function abc($a,$b){
+
 	}
+	
 
 }
 

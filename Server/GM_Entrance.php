@@ -10,24 +10,24 @@ class GM_Entrance{
 	 * 5.SESSION处理
 	 */
 
-	private static $gm_Mgr;
-	private static $gm_Checker;
-	private static $gm_Result;
-	private static $gm_Logger;
-	
+	private static $gm_Mgr;//gm管理器
+	private static $gm_Checker;//gm验证
+	private static $gm_Result;//gm结果处理
+	private static $gm_Logger;//gm logger
+
 	private static $initialize = false;
 	//入口初始化
 	public static function init(){
-	
+
 		self::$gm_Checker = new GM_Checker();
 		self::$gm_Mgr = new GM_CMDMgr();
 		self::$gm_Result= new GM_Result();
-		self::$gm_Logger = new GM_Log();		 
+		self::$gm_Logger = new GM_Log();
 
 	}
 
-	//json命令执行
-	public function process($gmJson)
+	//总流程控制
+	public static function process($gmJson)
 	{
 		if(!$initialize)
 			self::init();
@@ -42,13 +42,13 @@ class GM_Entrance{
 			return;
 		}
 
-		 
-		$ret = GM_CMDMgr::handleGMCmd($gmObject);
-		
+			
+		$ret = self::$gm_Mgr->handleGMCmd($gmObject);
+
 		return self::$gm_Result->processResult($ret);
 
 	}
-	 
+
 
 }
 
