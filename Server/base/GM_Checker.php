@@ -9,12 +9,16 @@ class GM_Checker{
 		!isset($gmObject->{'action'})||!isset($gmObject->{'data'})||
 		!is_object(($gmObject->{'data'}))){
 			
-			print_r('break in outside args');
-			return;
+			
+			return ErrorObject::genErr(ErrorConst::REQUEST_PARAM_BASIC_LESS);
 		}
 		//check action&data args
 		return $gmMgr->checkCMD($gmObject);
 			
+	}
+	public function checkGMAcessState(GM_Result $gmResult)
+	{
+		return $gmResult->checkResultState();
 	}
 
 }

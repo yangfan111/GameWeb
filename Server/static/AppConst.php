@@ -13,7 +13,9 @@ class AppConst
 	  
 	  //PATH
 	  const SERVER_CONFIG = '/config/serverList.json';
-	  
+	  const GM_CMD_CONFIG = '/config/gmCmdArgs.json';
+	  const GM_HANDLER_CLASS = 'GM_CMDHanlder';
+	   
 	 
 	  
 }
@@ -34,7 +36,7 @@ class GMMsgCMD
 	 const CHANGE_SERVER_STATE = 'server_changeGameServerState';
 	 //功能管理
 	 const TOGGLE_SERVER_FUNC = 'func_changeGameServerState';
-
+	
 	
 }
 ?>

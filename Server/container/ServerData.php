@@ -7,14 +7,24 @@ class ServerData{
 
 	public  function getGMServerList()
 	{
+		
 		$gmSrvArr = array();
-		foreach ($this->serverList as  $value) {
+
+		foreach ($this->serverList as $key =>$value) {
 
 			array_push($gmSrvArr, $value->getGMObject());
 		}
 		return $gmSrvArr;
 	}
-
+	public function changeServerState($serverCode,$tarServerState)
+	{
+		if(!isset($this->serverList[$serverCode]))
+		{
+			return;
+		}
+		$this->serverList[$serverCode]->gameSerpverState =$tarServerState;
+		return true;
+	}
 	function __construct($serverDataArr){
 		if(count($this->serverList)>0)
 		{
@@ -23,12 +33,14 @@ class ServerData{
 		//print_r($serverDataArr);
 		foreach ($serverDataArr->ServerList as $serverData)
 		{
-			//print_r($serverData);
-			array_push($this->serverList,new ServerInfo($serverData));
+		//	print_r($serverData);
+
+			$this->serverList[$serverData->{'gameServerCode'}] = new ServerInfo($serverData);
+
 		}
-	//	print(count($this->serverList));
+		//	print(count($this->serverList));
 	}
-	
+
 }
 
 

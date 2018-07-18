@@ -1,0 +1,19 @@
+{
+	"args":{
+	 	"server_getGameServerList" : 
+    		["gameAppId"],
+     	"server_changeGameServerState" : 
+    		["gameAppId","gameServerCode","gameServerState"],
+    	"user_getList" : 
+    		["gameAppId","start","limit"],
+     	"user_changeState":
+     		["gameAppId","gameUserId","gameServerCode","gameUserState","operateId","gameUserRemark","gameUserFreezeType"],
+	 	"event_add":
+	 		["eventId","gameAppId","eventCode","eventName","eventType","startTime","endTime","eventRewards"],
+	  	"event_remove":
+	 		["eventId","gameAppId","eventCode"]
+
+	}
+   
+
+}

@@ -18,6 +18,7 @@ class GM_Entrance{
 	private static $gm_Result;//gm结果处理
 	private static $gm_Logger;//gm logger
 
+
 	private static $initialize = false;
 	//入口初始化
 	public static function init(){
@@ -29,31 +30,60 @@ class GM_Entrance{
 		self::$gm_Logger = new GM_Log();
 
 	}
-
-	//总流程控制
 	public static function process($gmJson)
 	{
 		if(!self::$initialize)
-		self::init();
-
+		{
+			self::$initialize = false;
+			self::init();
+		}
+		if(!self::$gm_Checker->checkGMAcessState(self::$gm_Result))
+		{
+			return array(
+			'code'=>$this->errObj->error_code,
+			'message'=>$this->errObj->error_msg,
+			'data'=>Util::anon_class(),
+		);
+	
+		}
+		self::$gm_Result->beforeExc();
+		$processRet = self::realProcess($gmJson);
+		$finalResp = self::$gm_Result->wrapPostRet($processRet);
+		self::$gm_Result->afterExc();
+		return $finalResp;
+	}
+	//总流程控制
+	private static function realProcess($gmJson)
+	{
 
 		$gmObject = json_decode($gmJson);
 
 		if(!$gmObject)
 		{
+			self::$gm_Result->pushErrorCode(ErrorConst::REQUEST_JSON_INVALID);
 			return;
 		}
-		if(!self::$gm_Checker->checkGMArgs($gmObject, self::$gm_Mgr))
+		$checkRet = self::$gm_Checker->checkGMArgs($gmObject, self::$gm_Mgr);
+		if(is_a($checkRet,'ErrorObject'))
 		{
-		
+			self::$gm_Result->pushErrorObj($checkRet);
 			return;
 		}
+
+		//echo($checkRet);
+		//返回错误对象或数据
 		$dataRet = self::$gm_Mgr->handleGMCmd($gmObject);
-		if(isset($dataRet))
+		//print_r('dataRet :%s',$dataRet);
+		if(is_a($dataRet,'ErrorObject'))
 		{
-			$postData =	self::$gm_Result->wrapPostData($dataRet);
+			self::$gm_Result->pushErrorObj($dataRet);
+			return;
 		}
-		return json_encode($postData);
+		return $dataRet;
+		//$postData =	self::$gm_Result->wrapPostData($dataRet);
+		//return json_encode($postData);
+
+		//return json_encode($postData);
 		//return self::$gm_Result->processResult($ret);
 
 	}

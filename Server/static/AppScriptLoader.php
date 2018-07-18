@@ -2,7 +2,7 @@
 
 
 //类自动加载
-class AppOverview
+class AppScriptLoader
 {
 	//注册类
 	public static function registerClass($class_arr) {
@@ -42,5 +42,5 @@ class AppOverview
 //		);
 }
 
-spl_autoload_register(array('AppOverview','autoLoad'));
+spl_autoload_register(array('AppScriptLoader','autoLoad'));
 

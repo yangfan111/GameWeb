@@ -65,7 +65,12 @@ class Util{
 			return forward_static_call(array($className,$methodName),$argArr);
 		}
 	}
+	public static function anon_class()
+	{
+    	return new foo();
+	}
 	
 
 }	
+class foo{}
 

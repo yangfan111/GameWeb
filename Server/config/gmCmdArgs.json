@@ -1,0 +1,15 @@
+{
+	"args":{
+	 	"server_getGameServerList" : 
+    		["gameAppId"],
+     	"server_changeGameServerState" : 
+    		["gameAppId","gameServerCode","gameServerState"],
+	 	"event_add":
+	 		["eventId","gameAppId","eventCode","eventName","eventType","startTime","endTime","eventRewards"],
+	  	"event_remove":
+	 		["eventId","gameAppId","eventCode"]
+
+	}
+   
+
+}
