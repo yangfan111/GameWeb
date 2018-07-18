@@ -18,15 +18,16 @@ class ServerInfo
 	//游戏服务器状态
 	public  $gameServerState = ServerState::NORMAL;
 	function __construct($serverData) {
-		$this->gameServerCode = $serverData['gameServerCode'];
-		$this->gameServerName = $serverData['gameServerName'];
-		$this->url = $serverData['url'];
+		
+		$this->gameServerCode = $serverData->gameServerCode;
+		$this->gameServerName = $serverData->gameServerName;
+		$this->url = $serverData->url;
 
 	}
 	function getGMObject(){
 	  return array(
 		
-			'gameServerCode'=>$this->gameServerName,
+			'gameServerCode'=>$this->gameServerCode,
 			'gameAppId'=> $this->gameAppId,
 			'gameServerName'=> $this->gameServerName,
 			'gameServerState'=> $this->gameServerState,
@@ -34,10 +35,6 @@ class ServerInfo
 	}
 
 
-	function getAbc($name,$arrABC)
-	{
-		
-	}
 	
 }
 

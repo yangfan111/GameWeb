@@ -1,0 +1,11 @@
+{
+"timestamp": 1500000000,
+"sign": "AFdasfhk32rdsgv",
+"action": "server_changeGameServerState",
+"data": {
+	"gameAppId":8006,
+	"gameServerCode":"4",
+	"gameServerState":3
+	
+}
+}

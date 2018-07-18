@@ -1,4 +1,0 @@
-Pressing **enter** or **tab** after `/**` (or `###*` for Coffee-Script) yields a new line and closes the comment.
-
-
-enter tab 

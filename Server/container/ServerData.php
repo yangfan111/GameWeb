@@ -7,12 +7,12 @@ class ServerData{
 
 	public  function getGMServerList()
 	{
-		$ret = array();
+		$gmSrvArr = array();
 		foreach ($this->serverList as  $value) {
-			$ret[] =$value->getGMObject();
+
+			array_push($gmSrvArr, $value->getGMObject());
 		}
-	
-		return $ret;
+		return $gmSrvArr;
 	}
 
 	function __construct($serverDataArr){
@@ -20,10 +20,13 @@ class ServerData{
 		{
 			unset($this->serverList);
 		}
-		foreach ($serverDataArr as $serverData)
+		//print_r($serverDataArr);
+		foreach ($serverDataArr->ServerList as $serverData)
 		{
-			array_push($serverList,new ServerInfo($serverData));
+			//print_r($serverData);
+			array_push($this->serverList,new ServerInfo($serverData));
 		}
+	//	print(count($this->serverList));
 	}
 	
 }

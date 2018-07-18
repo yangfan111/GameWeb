@@ -4,23 +4,25 @@
 
 	//  public $cmdName;//命令
 	public $methodName;//处理函数
-	public $className;//类实例
-	public $classObj;//静态实例
+	
+	public $className;//静态实例
+	public $classObj;//类实例 
 	public $argNames;//参数列表
 	function __construct($methodArr, $argNames) {
 		Util::arrayToSpecificObject($methodArr, '',$this);
 		$this->argNames = $argNames;
 	} 
 
-	public function call($argArr)
+	public function call($argArr,GM_Mgr $mgr)
 	{
 		if(isset($this->classObj))
 		{
-			Util::callInstanceMethod($this->classObject, $this->methodName,$argArr);
+			return Util::callObjMethod($this->classObj, $this->methodName,array($argArr,$mgr),true);
 		} 
 		else{
-			Util::callStaticMethod($this->className, $this->$methodName, $argArr);
+			return Util::callStaticMethod($this->className, $this->methodName,array($argArr,$mgr),true);
 		}
+		
 	}	
 	/**
 	 * @param  [type]

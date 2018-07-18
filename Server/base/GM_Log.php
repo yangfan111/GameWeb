@@ -1,5 +1,5 @@
 <?php
-\class GM_Log{
+class GM_Log{
 
 
 	

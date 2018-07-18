@@ -7,12 +7,12 @@ class AppConst
 {
 	
 		//游戏appId
-	  const APP_ID = '';
-	  const PRIVATE_KEY = '';
+	  const APP_ID = 8006;
+	  const PRIVATE_KEY = '6b525b0d2144dcffeb7540aa0ed1c649';
 	  const APP_NOTE = '';
 	  
 	  //PATH
-	  const SERVER_CONFIG = '/Config/ServerList.json';
+	  const SERVER_CONFIG = '/config/serverList.json';
 	  
 	 
 	  
@@ -34,6 +34,7 @@ class GMMsgCMD
 	 const CHANGE_SERVER_STATE = 'server_changeGameServerState';
 	 //功能管理
 	 const TOGGLE_SERVER_FUNC = 'func_changeGameServerState';
-	 const TOGGLE_SERVER_FUNC = 'func_changeGameServerState';
+
 	
 }
+?>

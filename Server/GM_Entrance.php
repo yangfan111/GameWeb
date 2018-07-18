@@ -1,6 +1,9 @@
 <?php
 //gm入口
+
 define('API_ROOT', dirname(__FILE__));
+require_once (API_ROOT.'/static/AppRegistry.php');
+
 class GM_Entrance{
 	/*TODO:
 	 * 1.日志记录
@@ -19,8 +22,9 @@ class GM_Entrance{
 	//入口初始化
 	public static function init(){
 
+		AppRegistry::excute();
 		self::$gm_Checker = new GM_Checker();
-		self::$gm_Mgr = new GM_CMDMgr();
+		self::$gm_Mgr = new GM_Mgr();
 		self::$gm_Result= new GM_Result();
 		self::$gm_Logger = new GM_Log();
 
@@ -29,23 +33,28 @@ class GM_Entrance{
 	//总流程控制
 	public static function process($gmJson)
 	{
-		if(!$initialize)
-			self::init();
+		if(!self::$initialize)
+		self::init();
+
+
 		$gmObject = json_decode($gmJson);
+
 		if(!$gmObject)
 		{
-			//TODO:添加checkresult
 			return;
 		}
-		if(!self::$gm_Checker->checkGMArgs($gmObject, $gmMgr))
+		if(!self::$gm_Checker->checkGMArgs($gmObject, self::$gm_Mgr))
 		{
+		
 			return;
 		}
-
-			
-		$ret = self::$gm_Mgr->handleGMCmd($gmObject);
-
-		return self::$gm_Result->processResult($ret);
+		$dataRet = self::$gm_Mgr->handleGMCmd($gmObject);
+		if(isset($dataRet))
+		{
+			$postData =	self::$gm_Result->wrapPostData($dataRet);
+		}
+		return json_encode($postData);
+		//return self::$gm_Result->processResult($ret);
 
 	}
 

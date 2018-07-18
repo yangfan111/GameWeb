@@ -44,19 +44,28 @@ class Util{
 	 	$funcReflection = new \ReflectionFunction($funcRef);	
 	}
 	//Note that the parameters for call_user_func are  not passed by reference.
-	public static function callStaticMethod($className,$methodName,$argArr)
+	public static function callObjMethod($obj,$methodName,$argArr,$isMulArg = false)
 	{
-		call_user_func(array($className,$methodName),$argArr);	
+		if($isMulArg)
+		{
+			return call_user_method_array(array($className,$methodName),$argArr );	
+		}
+		else{
+			return call_user_method(array($className,$methodName),$argArr );	
+		}
+		
 	}
-	/**
-	 * @param  [type]
-	 * @param  [type]
-	 * @param  [type]
-	 * @return [type]
-	 */
-	public static function callInstanceMethod($classObject,$methodName,$argArr)
+	public static function callStaticMethod($className,$methodName,$argArr,$asMutiplyArg = false)
 	{
-		call_user_func(array($classObject,$methodName), $argArr);
+		if($asMutiplyArg)
+		{
+			return forward_static_call_array(array($className,$methodName),$argArr);
+		}
+		else {
+			return forward_static_call(array($className,$methodName),$argArr);
+		}
 	}
+	
+
 }	
 
