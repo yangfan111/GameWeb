@@ -29,14 +29,14 @@ class ServerState
 	 const MAINTAIN = 4;//维护中
 	 const EXPECTATION =5; //异常
 }
-class GMMsgCMD
-{
-	//服务器管理
-	 const GAME_SERVER_LIST = 'server_getGameServerList';
-	 const CHANGE_SERVER_STATE = 'server_changeGameServerState';
-	 //功能管理
-	 const TOGGLE_SERVER_FUNC = 'func_changeGameServerState';
+// class GMMsgCMD
+// {
+// 	//服务器管理
+// 	 const GAME_SERVER_LIST = 'server_getGameServerList';
+// 	 const CHANGE_SERVER_STATE = 'server_changeGameServerState';
+// 	 //功能管理
+// 	 const TOGGLE_SERVER_FUNC = 'func_changeGameServerState';
 	
 	
-}
+// }
 ?>

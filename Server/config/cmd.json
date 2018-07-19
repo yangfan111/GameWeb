@@ -1,8 +1,8 @@
 {
 "timestamp": 1500000000,
-
+"sign": "AFdasfhk32rdsgv",
 "action": "server_getGameServerList",
 "data": {
-
+		"gameAppId":8006
 }
 }
