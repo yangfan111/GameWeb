@@ -17,11 +17,11 @@
 	{
 		if(isset($this->classObj))
 		{
-			return Util::callObjMethod($this->classObj, $this->methodName,array($argArr,$mgr),true);
+			return Util::callObjMethod($this->classObj, $this->mehodName,array($argArr,$mgr),true);
 		} 
 		else{
 			return Util::callStaticMethod($this->className, $this->methodName,array($argArr,$mgr),true);
-		}
+		}	
 		
 	}	
 	/**

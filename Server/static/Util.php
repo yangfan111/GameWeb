@@ -10,6 +10,14 @@ class Util{
 			}
 		
 	}
+	//不同对象深克隆
+	public static function objectDeepClone($objSrc,$objTar)
+	{
+		foreach ($objSrc as $key => $value)
+		{
+			$objTar->{$key} = $value;
+		}
+	}
 	public static function objectToArray($obj)
 	{
 		$arr = is_object($obj) ?get_object_vars($obj):$obj;

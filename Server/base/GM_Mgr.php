@@ -7,15 +7,18 @@ class GM_Mgr{
 
 	public $serverData; //服务器数据实例
 
+	public $messageData;//消息实例
+
 	public  function register(){
 		$cmdConfigObj = Util::jsonFileDecode( dirname(dirname(__FILE__)). AppConst::GM_CMD_CONFIG);
 
 		$cmdArgsObj = $cmdConfigObj->args;
-		//server list 
+
+
 		$handlerClass = 'GM_CMDHandler';
 		foreach ($cmdArgsObj as $key => $value) {
 			$this->handlerMap[$key] = new GM_OpObject(
-				array('className'=>$handlerClass,'methodName'=>
+			array('className'=>$handlerClass,'methodName'=>
 					'handle_'.$key),$value);
 		}
 
@@ -28,12 +31,12 @@ class GM_Mgr{
 	}
 	public function checkCMD($gmObject){
 		if (!isset($this->handlerMap[$gmObject->{'action'}]))
-		{	
+		{
 
 			//print_r('break in action args');
 			return ErrorObject::genErr(ErrorConst::INVALID_REQUEST_TYPE);
 		}
-		
+
 		//check action
 		$handlerReqArgs = $this->handlerMap[$gmObject->{'action'}]->argNames;
 		$gmData = $gmObject->{'data'};
@@ -47,8 +50,7 @@ class GM_Mgr{
 		}
 		return true;
 	}
-	/**
-	 * 
+	/*
 	 * @return 成功 ：数据结构 |失败：ErrorObject
 	 * @param unknown_type $gmObject
 	 */
@@ -59,9 +61,9 @@ class GM_Mgr{
 		if(!isset($ret)){
 			return ErrorObject::genErr(ErrorConst::REQUEST_CMD_EXCUTE_ERROR);
 		}
-		
+
 		return $ret;
-	
+
 
 	}
 	public function init()
@@ -71,9 +73,11 @@ class GM_Mgr{
 
 	private function initConfig(){
 
-		$serverDataArr = Util::jsonFileDecode( dirname(dirname(__FILE__)). AppConst::SERVER_CONFIG);
-		
-		$this->serverData = new ServerData($serverDataArr);
+		$dataArr = Util::jsonFileDecode( dirname(dirname(__FILE__)). AppConst::SERVER_CONFIG);
+
+		$this->serverData = new ServerData($dataArr);
+		$dataArr =  Util::jsonFileDecode( dirname(dirname(__FILE__)). AppConst::MESSAGE_CONFIG);
+		$this->messageData = new MessageData($dataArr);
 
 	}
 

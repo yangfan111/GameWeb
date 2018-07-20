@@ -3,7 +3,7 @@
 /*
  * 账号平台数据库配置
  */
-class ServerInfo
+class ServerInfo extends GMEntry
 {
 	//数据库ip
 	public  $gameAppId = AppConst::APP_ID;
@@ -17,13 +17,13 @@ class ServerInfo
 	public  $url;
 	//游戏服务器状态
 	public  $gameServerState = ServerState::NORMAL;
-	function __construct($serverData) {
-		
-		$this->gameServerCode = $serverData->gameServerCode;
-		$this->gameServerName = $serverData->gameServerName;
-		$this->url = $serverData->url;
-
-	}
+//	function __construct($serverData) {
+//		
+//		$this->gameServerCode = $serverData->gameServerCode;
+//		$this->gameServerName = $serverData->gameServerName;
+//		$this->url = $serverData->url;
+//
+//	}
 	function getGMObject(){
 	  return array(
 		
