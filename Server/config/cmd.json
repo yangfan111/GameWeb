@@ -1,8 +1,25 @@
 {
 "timestamp": 1500000000,
 "sign": "AFdasfhk32rdsgv",
-"action": "server_getGameServerList",
+"action": "message_push",
 "data": {
-		"gameAppId":8006
+	"gameAppId":8006,
+
+	"messageName":"abc",
+
+	"messageId":1002,
+	"publishTypeCode":18,
+	"receiveType":3,
+	"startTime":"1500000000",
+	"isGlobalSync":1,
+	"messageBodyList":[
+		{
+			"languageID":1,
+			"tittle":"test",
+			"content":"test content"
+		}
+		
+	],
+	"hasUserList":2
 }
 }

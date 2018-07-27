@@ -2,8 +2,8 @@
 
 class ServerData{
 
-	//当前服务器列表
 	public  $serverList =  array();
+	//当前服务器列表
 
 	public  function getGMServerList()
 	{

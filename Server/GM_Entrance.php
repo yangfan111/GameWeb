@@ -32,11 +32,15 @@ class GM_Entrance{
 	}
 	public static function process($gmJson)
 	{
+		$gmObject = json_decode($gmJson);
+
+	
 		if(!self::$initialize)
 		{
 			self::$initialize = false;
 			self::init();
 		}
+		
 		if(!self::$gm_Checker->checkGMAcessState(self::$gm_Result))
 		{
 			return array(
@@ -44,12 +48,14 @@ class GM_Entrance{
 			'message'=>$this->errObj->error_msg,
 			'data'=>Util::anon_class(),
 		);
-	
 		}
 		self::$gm_Result->beforeExc();
 		$processRet = self::realProcess($gmJson);
+		//封装操作结果
 		$finalResp = self::$gm_Result->wrapPostRet($processRet);
+
 		self::$gm_Result->afterExc();
+		//Util::jsonFileEncode($finalResp,dirname(__FILE__).AppConst::LOGG);
 		return $finalResp;
 	}
 	//总流程控制
@@ -60,12 +66,15 @@ class GM_Entrance{
 
 		if(!$gmObject)
 		{
+		
 			self::$gm_Result->pushErrorCode(ErrorConst::REQUEST_JSON_INVALID);
 			return;
 		}
+		self::$gm_Logger->writeLog($gmJson,AppConst::LOG_FLAG_INPUT);		
 		$checkRet = self::$gm_Checker->checkGMArgs($gmObject, self::$gm_Mgr);
 		if(is_a($checkRet,'ErrorObject'))
 		{
+			
 			self::$gm_Result->pushErrorObj($checkRet);
 			return;
 		}
@@ -76,6 +85,7 @@ class GM_Entrance{
 		//print_r('dataRet :%s',$dataRet);
 		if(is_a($dataRet,'ErrorObject'))
 		{
+			
 			self::$gm_Result->pushErrorObj($dataRet);
 			return;
 		}

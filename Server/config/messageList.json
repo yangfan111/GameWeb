@@ -1,5 +1,1 @@
-{
-	"messages":[
-	
-	]
-}
+{"messages":[{"gameAppId":8006,"messageId":1001,"messageName":"abcfff","publishTypeCode":10,"receiveType":2,"startTime":"1500000000","isGlobalSync":1,"messageBodyList":[{"languageID":1,"tittle":"test","content":"test content"}],"hasUserList":2},{"gameAppId":8006,"messageId":1002,"messageName":"abc","publishTypeCode":18,"receiveType":3,"startTime":"1500000000","isGlobalSync":1,"messageBodyList":[{"languageID":1,"tittle":"test","content":"test content"}],"hasUserList":2}]}

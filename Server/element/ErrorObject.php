@@ -61,12 +61,16 @@ class ErrorConst
 	
 	const SUCCEED = 1;									//成功
 	const DATA_ILLEGAL = 2;								//数据非法
+	//usable----------------------------------------------
 	const INVALID_REQUEST_TYPE = 3;						//无效的请求类型
-	const REQUEST_PARAM_BASIC_LESS = 4;						//请求类型的参数不足
+	const REQUEST_PARAM_BASIC_LESS = 4;						//请求类型的基础参数不足
+	const REQUEST_JSON_INVALID = 5;
+	const REQUEST_CMD_EXCUTE_ERROR = 6;					//请求的数据执行出错
+	const REQUEST_PARAM_DATA_LESS = 7;						//请求类型的DATA参数不足
+	//-----------------------------------------------------
 	
-	const REQUEST_JSON_INVALID = 5;						//请求的数据执行出错
-	const REQUEST_CMD_EXCUTE_ERROR = 6;
-	const REQUEST_PARAM_DATA_LESS = 7;						//请求类型DATA的参数不足
+	
+	
 	const NEED_LOGIN_FIRST = 101;						//需要先登录
 	const ALREADY_LOGIN = 102;							//已登录
 	const ALREADY_LOGIN_NOT_REGISTER = 103;				//已登录，不能注册

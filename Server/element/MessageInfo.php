@@ -12,6 +12,8 @@ class MessageInfo extends GMEntry
 	//游戏服务器名字
 	public  $messageName;
 	
+	public $gameServerCode;
+	
 	public $publishTypeCode;
 	
 	public $receiveType;
@@ -35,7 +37,7 @@ class MessageInfo extends GMEntry
 	public $playerCount;
 	public $filePath;
 	
-
+	
 //	function getGMObject(){
 //	  return array(
 //		

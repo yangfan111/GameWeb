@@ -10,7 +10,9 @@ $jsonObj = file_get_contents(dirname(__FILE__).'/config/cmd.json');
 $ret = GM_Entrance::process($jsonObj);
 //$gm = new GM_Mgr();
 //$gm->initConfig();
+
 echo json_encode($ret);
 
  
 ?>
+  

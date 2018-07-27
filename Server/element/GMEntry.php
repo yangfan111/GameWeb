@@ -7,6 +7,15 @@ class GMEntry{
 function __construct($src) {
 		Util::objectDeepClone($src,$this);
 	}
+	
+public function modify($src)
+{
+Util::objectDeepClone($src,$this);
+}
+public function GetGMObject()
+	{
+		return (Object)array_filter((array)$this); 
+	}
 }
 class MessageBodyInfo extends GMEntry
 {

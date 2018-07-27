@@ -16,8 +16,9 @@ class AppConst
 	  const GM_CMD_CONFIG = '/config/gmCmdArgs.json';
 	  const MESSAGE_CONFIG=   '/config/messageList.json';
 	  const GM_HANDLER_CLASS = 'GM_CMDHanlder';
-	   
-	 
+	  const LOG_IO='/log/io';
+	  const LOG_FLAG_INPUT = 'Input';
+	  const LOG_FLAG_OUTPUT='Output';
 	  
 }
 

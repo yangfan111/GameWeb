@@ -43,6 +43,11 @@ class Util{
 	  $fileRawData = file_get_contents($filePath);	
 	  return json_decode($fileRawData);
 	}
+	public static function jsonFileEncode($fileData,$filename)
+	{
+		$fileJsonData = json_encode($fileData);
+		file_put_contents($filename, $fileJsonData);
+	}
 	/**
 	 * @param  	
 	 * @return [type]
@@ -73,12 +78,50 @@ class Util{
 			return forward_static_call(array($className,$methodName),$argArr);
 		}
 	}
+	/**
+	 * @DateTime 2018-07-27
+	 * @Desc     匿名函数类
+	 */
 	public static function anon_class()
 	{
-    	return new foo();
+    	return new stdClass();
 	}
-	
+	/**
+	 * @DateTime 2018-07-27
+	 * @Desc     平台通用创建文件夹
+	 * @return   [type]              [description]
+	 */
+	public static function makeDir($srcPath, $mode = 777,$exclusive = true) {
+		//转换为目录标识符
+		$srcPath = Util::toFormatPath($srcPath);
 
+		$tarDirPath = self::toPureDir($srcPath);
+		
+		if (file_exists($tarDirPath))
+			return ;
+		mkdir($tarDirPath,$model,true);
+		//return $srcPath;
+		// if ($res)
+		// 	return $dirPath;
+		// else
+		// 	throw new Exception("Error Custom_log Processing", 1);
+			
+	
+	}
+	public static function toFormatPath($srcPath)
+	{
+		return str_replace(array('/','//','\\','\\\\'),DIRECTORY_SEPARATOR,$srcPath);
+	}
+	/**
+	 * @DateTime 2018-07-27
+	 * @Desc     将/字符后面的内容去掉
+	 */
+	public static function toPureDir($path)
+	{
+		return pathinfo($path)['dirname'];
+		//return str_replace(strrchr($path, DIRECTORY_SEPARATOR), "", $path) . DIRECTORY_SEPARATOR;
+		
+	}
 }	
-class foo{}
+
 

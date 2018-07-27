@@ -3,8 +3,9 @@
 //管理器
 class GM_Mgr{
 
-	private $handlerMap = array();//处理接口
-
+	public $handlerMap = array();//处理接口
+	
+	
 	public $serverData; //服务器数据实例
 
 	public $messageData;//消息实例
@@ -29,27 +30,27 @@ class GM_Mgr{
 		$this->init();
 
 	}
-	public function checkCMD($gmObject){
-		if (!isset($this->handlerMap[$gmObject->{'action'}]))
-		{
-
-			//print_r('break in action args');
-			return ErrorObject::genErr(ErrorConst::INVALID_REQUEST_TYPE);
-		}
-
-		//check action
-		$handlerReqArgs = $this->handlerMap[$gmObject->{'action'}]->argNames;
-		$gmData = $gmObject->{'data'};
-		//check data
-		foreach ($handlerReqArgs as $argName)
-		{
-			if(!isset($gmData->{$argName})){
-				//print_r('break in data args');
-				return ErrorObject::genErr(ErrorConst::REQUEST_PARAM_DATA_LESS);
-			}
-		}
-		return true;
-	}
+//	public function checkCMD($gmObject){
+//		if (!isset($this->handlerMap[$gmObject->{'action'}]))
+//		{
+//
+//			//print_r('break in action args');
+//			return ErrorObject::genErr(ErrorConst::INVALID_REQUEST_TYPE);
+//		}
+//
+//		//check action
+//		$handlerReqArgs = $this->handlerMap[$gmObject->{'action'}]->argNames;
+//		$gmData = $gmObject->{'data'};
+//		//check data
+//		foreach ($handlerReqArgs as $argName)
+//		{
+//			if(!isset($gmData->{$argName})){
+//				//print_r('break in data args');
+//				return ErrorObject::genErr(ErrorConst::REQUEST_PARAM_DATA_LESS);
+//			}
+//		}
+//		return true;
+//	}
 	/*
 	 * @return 成功 ：数据结构 |失败：ErrorObject
 	 * @param unknown_type $gmObject
@@ -57,6 +58,7 @@ class GM_Mgr{
 	public  function handleGMCmd($gmObject)
 	{
 		$handlerObject = $this->handlerMap[$gmObject->{'action'}] ;
+		//成功返回data object || true,失败返回空值
 		$ret = $handlerObject->call($gmObject->{'data'},$this);
 		if(!isset($ret)){
 			return ErrorObject::genErr(ErrorConst::REQUEST_CMD_EXCUTE_ERROR);

@@ -24,15 +24,7 @@ class ServerInfo extends GMEntry
 //		$this->url = $serverData->url;
 //
 //	}
-	function getGMObject(){
-	  return array(
-		
-			'gameServerCode'=>$this->gameServerCode,
-			'gameAppId'=> $this->gameAppId,
-			'gameServerName'=> $this->gameServerName,
-			'gameServerState'=> $this->gameServerState,
-		);
-	}
+	
 
 
 	

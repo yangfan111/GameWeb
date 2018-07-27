@@ -3,11 +3,10 @@
 class GM_CMDHandler
 {
 	/**
-	 * 
-	 * @return 成功返回data object对象或者true
-	 * 失败返回空值
 	 * @param $gmData
 	 * @param $gm_Mgr
+	 * @return 成功返回data object对象或者true
+	 * 失败返回空值
 	 */
 	public static function handle_server_changeGameServerState($gmData,GM_Mgr $gm_Mgr){
 		return $gm_Mgr->serverData->changeServerState($gmData->{'gameServerCode'},
@@ -20,5 +19,10 @@ class GM_CMDHandler
 		$anonObj = Util::anon_class();
 		$anonObj->{'gameServerList'} = $gm_Mgr->serverData->getGMServerList();
 		return $anonObj;
+	}
+	public static function handle_message_push($gmData,GM_Mgr $gm_Mgr)
+	{
+		$anonObj = Util::anon_class();
+		return $gm_Mgr->messageData->ModifyMessage($gmData);
 	}
 }
