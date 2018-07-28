@@ -1,0 +1,8 @@
+启动配置
+1.sublime-php
+  在Tool-buildingTool-System中添加启动配置
+  在电脑上配置环境变量
+  重启电脑生效
+ctags:-R -f .tags”运行ctags.exe
+文件名不能用数字带：
+  
