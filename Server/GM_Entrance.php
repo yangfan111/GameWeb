@@ -30,6 +30,10 @@ class GM_Entrance {
 
 	}
 	public static function process($gmJson) {
+
+
+		$testJson = file_get_contents(dirname(__FILE__) . '/config/test.json');
+
 		$gmObject = json_decode($gmJson);
 
 		if (!self::$initialize) {
@@ -44,6 +48,7 @@ class GM_Entrance {
 				'data' => Util::anon_class(),
 			);
 		}
+		self::$gm_Result->testExc(self::$gm_Logger,$testJson);
 		self::$gm_Result->beforeExc(self::$gm_Logger, $gmJson);
 		$processRet = self::realProcess($gmJson);
 		//封装操作结果

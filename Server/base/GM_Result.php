@@ -15,6 +15,10 @@ class GM_Result {
 		);
 		return $resp;
 	}
+	public function testExc($gm_Logger,$testJson)
+	{
+		$gm_Logger->writeTargetLog($testJson);
+	}
 	public function beforeExc($gm_Logger, $gmJson) {
 		$this->webLockTag = true;
 		$this->errObj = ErrorObject::genErr(1);

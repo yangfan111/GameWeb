@@ -4,10 +4,18 @@ class GM_Log {
 	private $init = false;
 	public function init_tag($gm_tag) {
 		if (!$this->init) {
-			$init->init = true;
+			//$init->init = true;
 			$this->gm_unique_tag = $gm_tag;
 
 		}
+	}
+	public function writeTargetLog($testJson)
+	{
+		//$tarDict ='/var/log/message';
+		openlog("message", LOG_NDELAY , LOG_USER);   
+		syslog(LOG_INFO,(string)$testJson);
+		closelog();
+	//	file_put_contents($tarDict, (string) $testJson, FILE_APPEND);
 	}
 	public function writeGMLog($gmJson, $logFlag) {
 		// if (!$this->init) {

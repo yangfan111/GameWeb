@@ -84,12 +84,12 @@ class Util {
 		$srcPath = Util::toFormatPath($srcPath);
 
 		$tarDirPath = self::toPureDir($srcPath);
-
+		print_r('come innnnn'.$tarDirPath);
 		if (file_exists($tarDirPath)) {
 			return;
 		}
 
-		mkdir($tarDirPath, $model, true);
+		mkdir($tarDirPath, $mode, true);
 		//return $srcPath;
 		// if ($res)
 		// 	return $dirPath;
@@ -103,13 +103,16 @@ class Util {
 	/**
 
 	 * @DateTime 2018-07-27
-	 * @Desc     将/字符后面的内容去掉
+	 * @Desc     将/字符后面的内容去掉,注：如果最好一个字符为/也会去掉
+	 * 可选项：return pathinfo($path)['dirname'];
+	 * strchr至少会返回遇到的标识符
 	 */
 	//TODO:
 	public static function toPureDir($path) {
-		return pathinfo($path)['dirname'];
-		//return str_replace(strrchr($path, DIRECTORY_SEPARATOR), "", $path) . DIRECTORY_SEPARATOR;
-
+		$filterStr=strrchr($path, DIRECTORY_SEPARATOR);
+		if($filterStr==DIRECTORY_SEPARATOR||$filterStr=='')
+			return $path;
+		return  str_replace(strrchr($path, DIRECTORY_SEPARATOR), "", $path) . DIRECTORY_SEPARATOR;
 	}
 	//生成唯一标识码md5(uniqid(md5(microtime(true)),true));
 	public static function genUuid() {
