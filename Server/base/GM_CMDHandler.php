@@ -33,8 +33,8 @@ class GM_CMDHandler
 	public static function handle_clientWebData($gmData,GM_Mgr $gm_Mgr)
 	{
 		$anonObj = Util::anon_class();
-		$anonObj->{'gameServerList'} = $gm_Mgr->serverData->getGMServerList();
-		$anonObj->{'gameMessageList'} =  $gm_Mgr->messageData->getGMMessageList();
+		$anonObj->{'gameServerList'} = $gm_Mgr->serverData->getGMServerList($gmData->{'channel'});
+		$anonObj->{'gameMessageList'} =  $gm_Mgr->messageData->getCltMessageList($gmData->{'langId'});
 		return $anonObj;
 	}
 }

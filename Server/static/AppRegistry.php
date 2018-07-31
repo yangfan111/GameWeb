@@ -42,7 +42,8 @@ class AppRegistry
 				'AppRegistry'=>CLASS_ROOT.'/static/AppRegistry.php',
 				'AppScriptLoader'=>CLASS_ROOT.'./static/AppScriptLoader.php',
 				'Util'=>CLASS_ROOT.'/static/Util.php',
-			
+				'SubDirMask'=>CLASS_ROOT.'/static/AppConst.php',	
+				'ChannelMask'=>CLASS_ROOT.'/static/AppConst.php',	
 				'Distribution'=>CLASS_ROOT.'/Distribution.php',
 				'GM_Entrance'=>CLASS_ROOT.'/GM_Entrance.php',
 		);

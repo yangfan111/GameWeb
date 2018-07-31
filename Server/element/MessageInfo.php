@@ -36,7 +36,25 @@ class MessageInfo extends GMEntry
 	public $channelCodeList;
 	public $playerCount;
 	public $filePath;
-	
+	function getCltObject($langId)
+	{	
+
+		return array(
+			'messageName'=>$this->messageName,
+			'messageBody'=>$this->_findLangBody($langId)
+		);
+
+	}
+	private function _findLangBody($langId)
+	{
+		foreach ($this->messageBodyList as $value) {
+			if($value->{'languageID'} == $langId)
+			{
+				return $value; 
+			}
+		}
+		
+	}
 	
 //	function getGMObject(){
 //	  return array(

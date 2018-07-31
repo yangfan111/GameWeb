@@ -2,18 +2,33 @@
 
 class ServerData{
 
+
+	private $channel_DEV = array("1","2","3","4","5","6","7");
+	private $channel_CJ=array("1");
+	private $channel_QA =array("1","2");
+
+
+	// const QA = 2;
+	// const CJ = 3;
+
 	public  $serverList =  array();
 	//当前服务器列表
-
-	public  function getGMServerList()
+	public  $channelList =  array();
+	public  function getGMServerList($channel = 'channel_DEV')
 	{
 		
 		$gmSrvArr = array();
-
-		foreach ($this->serverList as $key =>$value) {
-
-			array_push($gmSrvArr, $value->getGMObject());
+		$tarServerList=array();
+		if(isset($this->channelList[$channel]))
+		{
+			$tarServerList= $this->channelList[$channel]->{'include'};
 		}
+	
+		foreach ($tarServerList as $key) {
+			# code...
+			array_push($gmSrvArr,$this->serverList[$key]->getGMObject());
+		}
+		//没有为空列表
 		return $gmSrvArr;
 	}
 	public function changeServerState($serverCode,$tarServerState)
@@ -26,16 +41,20 @@ class ServerData{
 		return true;
 	}
 	function __construct($serverDataArr){
-		if(count($this->serverList)>0)
-		{
-			unset($this->serverList);
-		}
-		//print_r($serverDataArr);
+		
+
 		foreach ($serverDataArr->ServerList as $serverData)
 		{
-		//	print_r($serverData);
+	
 
 			$this->serverList[$serverData->{'gameServerCode'}] = new ServerInfo($serverData);
+
+		}
+		foreach ($serverDataArr->ChannelList as $channelData)
+		{
+	
+
+			$this->channelList[$channelData->{'name'}] = $channelData;
 
 		}
 		//	print(count($this->serverList));

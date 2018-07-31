@@ -3,6 +3,9 @@
 "sign": "AFdasfhk32rdsgv",
 "action": "clientWebData",
 "data": {
-	"gameAppId":8006
+	"gameAppId":8006,
+	"guid":"1111",
+	"langId":2,
+	"channel":"channel_DEV"
 }
 }

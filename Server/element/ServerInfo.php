@@ -17,6 +17,8 @@ class ServerInfo extends GMEntry
 	public  $url;
 	//游戏服务器状态
 	public  $gameServerState = ServerState::NORMAL;
+
+
 //	function __construct($serverData) {
 //		
 //		$this->gameServerCode = $serverData->gameServerCode;

@@ -22,8 +22,8 @@ class GM_Result {
 	public function beforeExc($gm_Logger, $gmJson) {
 		$this->webLockTag = true;
 		$this->errObj = ErrorObject::genErr(1);
-		$logTag = date("H_i_s");
-		$gm_Logger->init_tag($logTag);
+		
+		$gm_Logger->init_tag();
 		$gm_Logger->writeGMLog($gmJson, AppConst::LOG_FLAG_INPUT);
 	}
 	public function afterExc($gm_Logger, $gmJson) {
@@ -46,7 +46,7 @@ class GM_Result {
 		//		print_r($this->errObj);
 	}
 	public function __print() {
-		print_r($this->errObj);
+	//	print_r($this->errObj);
 	}
 
 }

@@ -12,7 +12,7 @@
 
 	},
 	"client":{
-		"clientWebData":["gameAppId"]
+		"clientWebData":["gameAppId","guid","langId","channel"]
 
 	}
    

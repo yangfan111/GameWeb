@@ -25,7 +25,17 @@ class MessageData {
 		}
 		return $gmMsgArr;
 	}
+	public function getCltMessageList($langId)
+	{
+		$gmMsgArr = array();
 
+		foreach ($this->messageList as $key =>$value) {
+			$msgObj = $value->getCltObject($langId);
+			if(isset($msgObj['messageBody']))
+				array_push($gmMsgArr, $msgObj);
+		}
+		return $gmMsgArr;
+	}
 	public function modifyMessage($gmData) {
 		$msgId = $gmData->{'messageId'};
 		$msgInfo = null;

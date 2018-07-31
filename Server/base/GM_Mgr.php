@@ -80,7 +80,7 @@ class GM_Mgr{
 	private function initConfig(){
 
 		$dataArr = Util::jsonFileDecode( dirname(dirname(__FILE__)). AppConst::SERVER_CONFIG);
-
+	//	print('AAAAAAA'.(string)$dataArr);
 		$this->serverData = new ServerData($dataArr);
 		$dataArr =  Util::jsonFileDecode( dirname(dirname(__FILE__)). AppConst::MESSAGE_CONFIG);
 		$this->messageData = new MessageData($dataArr);

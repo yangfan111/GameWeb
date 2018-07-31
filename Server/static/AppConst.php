@@ -37,12 +37,19 @@ class GM_GlobalType {
 	const NO = 2;
 }
 class ServerState {
-	const NORMAL = 1;
-	const RECOMMAND = 2; //正常
+	const NORMAL = 1;//正常
+	const RECOMMAND = 2; 
 	const HOT = 3; //火爆
 	const MAINTAIN = 4; //维护中
 	const EXPECTATION = 5; //异常
 }
+class SubDirMask{
+
+	const HOUR=1;
+	const DAY=2;
+	const MONTH=3;
+}
+
 // class GMMsgCMD
 // {
 // 	//服务器管理
