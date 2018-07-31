@@ -79,16 +79,19 @@ class Util {
 	 * @Desc     平台通用创建文件夹
 	 * @return   [type]              [description]
 	 */
-	public static function makeDir($srcPath, $mode = 777, $exclusive = true) {
+	public static function makeDir($srcPath, $mode = 0777, $exclusive = true) {
 		//转换为目录标识符
 		$srcPath = Util::toFormatPath($srcPath);
-
+//$fpth = dirname(dirname(__FILE__)).'/config/output.log';
 		$tarDirPath = self::toPureDir($srcPath);
-		print_r('come innnnn'.$tarDirPath);
+  	    	($tarDirPath."\n");
 		if (file_exists($tarDirPath)) {
+			//file_put_contents($fpth, $tarDirPath, FILE_APPEND); //
 			return;
 		}
-
+		print_r($tarDirPath."\n");
+		
+	//	file_put_contents($fpth, $tarDirPath, FILE_APPEND); //
 		mkdir($tarDirPath, $mode, true);
 		//return $srcPath;
 		// if ($res)
@@ -111,8 +114,11 @@ class Util {
 	public static function toPureDir($path) {
 		$filterStr=strrchr($path, DIRECTORY_SEPARATOR);
 		if($filterStr==DIRECTORY_SEPARATOR||$filterStr=='')
+		{
+		
 			return $path;
-		return  str_replace(strrchr($path, DIRECTORY_SEPARATOR), "", $path) . DIRECTORY_SEPARATOR;
+		}
+		return  str_replace(strrchr($path, DIRECTORY_SEPARATOR), "", $path) . DIRECTORY_SEPARATOR;;
 	}
 	//生成唯一标识码md5(uniqid(md5(microtime(true)),true));
 	public static function genUuid() {

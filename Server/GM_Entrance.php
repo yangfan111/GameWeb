@@ -31,10 +31,26 @@ class GM_Entrance {
 	}
 	public static function process($gmJson) {
 
+	// if (!self::$initialize) {
+	// 		self::$initialize = false;
+	// 		self::init();
+	// 	}
+	//	$formatStr = date("[H:i:s] ") . "\n" . '<' . $logFlag . '>' . "\n";
+		// $fstFileDir = dirname(__FILE__) . AppConst::LOG_IO;
+		// $scdFileDir = date("[Y-m-d]");
+		// //每次请求产生一次log文件
+		// $fileName = 'gm_' . 'ffffff' . '.log';
+		// $filePath = Util::toFormatPath($fstFileDir . DIRECTORY_SEPARATOR . $scdFileDir . DIRECTORY_SEPARATOR . $fileName);
+		// Util::makeDir($filePath);
+	//	print_r("write " . $filePath . "\n");
+		
+	//	file_put_contents($filePath, $formatStr, FILE_APPEND); //添加消息头
 
-		$testJson = file_get_contents(dirname(__FILE__) . '/config/test.json');
+	//	file_put_contents($filePath, (string) $gmJson . "\n", FILE_APPEND); //消息体
 
-		$gmObject = json_decode($gmJson);
+		//$testJson = file_get_contents(dirname(__FILE__) . '/config/test.json');
+
+		//$gmObject = json_decode($gmJson);
 
 		if (!self::$initialize) {
 			self::$initialize = false;
@@ -48,7 +64,7 @@ class GM_Entrance {
 				'data' => Util::anon_class(),
 			);
 		}
-		self::$gm_Result->testExc(self::$gm_Logger,$testJson);
+		//self::$gm_Result->testExc(self::$gm_Logger,$testJson);
 		self::$gm_Result->beforeExc(self::$gm_Logger, $gmJson);
 		$processRet = self::realProcess($gmJson);
 		//封装操作结果

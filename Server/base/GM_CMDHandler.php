@@ -22,7 +22,19 @@ class GM_CMDHandler
 	}
 	public static function handle_message_push($gmData,GM_Mgr $gm_Mgr)
 	{
+		//$anonObj = Util::anon_class();
+		return $gm_Mgr->messageData->modifyMessage($gmData);
+	}
+	public static function handle_message_disable($gmData,GM_Mgr $gm_Mgr)
+	{
+
+		return $gm_Mgr->messageData->deleteMessage($gmData);
+	}
+	public static function handle_clientWebData($gmData,GM_Mgr $gm_Mgr)
+	{
 		$anonObj = Util::anon_class();
-		return $gm_Mgr->messageData->ModifyMessage($gmData);
+		$anonObj->{'gameServerList'} = $gm_Mgr->serverData->getGMServerList();
+		$anonObj->{'gameMessageList'} =  $gm_Mgr->messageData->getGMMessageList();
+		return $anonObj;
 	}
 }

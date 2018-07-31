@@ -1,12 +1,18 @@
 {
-	"args":{
+	"gm":{
 	 	"server_getGameServerList" : 
     		["gameAppId"],
      	"server_changeGameServerState" : 
     		["gameAppId","gameServerCode","gameServerState"],
 	 	"message_push":
-	 		["messageId","gameAppId","messageName","publishTypeCode","receiveType","startTime","isGlobalSync","messageBodyList","hasUserList"]
-	  
+	 		["messageId","gameAppId","messageName","publishTypeCode","receiveType","startTime","isGlobalSync","messageBodyList","hasUserList"],
+	  	"message_disable":
+	  		["messageId","gameAppId"]
+
+
+	},
+	"client":{
+		"clientWebData":["gameAppId"]
 
 	}
    

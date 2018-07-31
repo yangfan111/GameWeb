@@ -4,28 +4,8 @@ class MessageData {
 
 	//当前服务器列表
 	public $messageList = array();
-
-	public function getGMServerList() {
-
-		$gmSrvArr = array();
-
-		foreach ($this->serverList as $key => $value) {
-
-			array_push($gmSrvArr, $value->getGMObject());
-		}
-		return $gmSrvArr;
-	}
-	public function changeServerState($serverCode, $tarServerState) {
-		if (!isset($this->serverList[$serverCode])) {
-			return;
-		}
-		$this->serverList[$serverCode]->gameSerpverState = $tarServerState;
-		return true;
-	}
 	function __construct($messageDataArr) {
-		if (count($this->messageList) > 0) {
-			unset($this->messageList);
-		}
+	
 		//print_r($serverDataArr);
 		foreach ($messageDataArr->messages as $messageData) {
 
@@ -34,7 +14,19 @@ class MessageData {
 		}
 		//	print(count($this->serverList));
 	}
-	function ModifyMessage($gmData) {
+	public  function getGMMessageList()
+	{
+		
+		$gmMsgArr = array();
+
+		foreach ($this->messageList as $key =>$value) {
+
+			array_push($gmMsgArr, $value->getGMObject());
+		}
+		return $gmMsgArr;
+	}
+
+	public function modifyMessage($gmData) {
 		$msgId = $gmData->{'messageId'};
 		$msgInfo = null;
 		//添加或替换文件
@@ -57,6 +49,30 @@ class MessageData {
 		Util::jsonFileEncode($anonObj, dirname(dirname(__FILE__)) . AppConst::MESSAGE_CONFIG);
 		//echo(json_encode($this->messageList));
 		return true;
+	}
+	public function deleteMessage($gmData)
+	{
+		$msgId = $gmData->{'messageId'};
+		
+		if (isset($this->messageList[$msgId])) {
+			
+			unset($this->messageList[$msgId]);
+			
+			$anonObj = Util::anon_class();
+		//array_filter arwwray_value
+			$messageSafeArr = array_map(function ($element) {
+				return $element->getGMObject();
+			}, $this->messageList);
+		
+			$anonObj->{'messages'} = count($messageSafeArr)>0? array_values($messageSafeArr):array();
+		//var_dump($anonObj);
+			Util::jsonFileEncode($anonObj, dirname(dirname(__FILE__)) . AppConst::MESSAGE_CONFIG);
+
+
+
+		}
+		return true;
+
 	}
 
 }

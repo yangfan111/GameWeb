@@ -13,16 +13,20 @@ class GM_Mgr{
 	public  function register(){
 		$cmdConfigObj = Util::jsonFileDecode( dirname(dirname(__FILE__)). AppConst::GM_CMD_CONFIG);
 
-		$cmdArgsObj = $cmdConfigObj->args;
-
+		$cmd_gmArgsObj = $cmdConfigObj->gm;
+		$cmd_cltArgsObj = $cmdConfigObj->client;
 
 		$handlerClass = 'GM_CMDHandler';
-		foreach ($cmdArgsObj as $key => $value) {
+		foreach ($cmd_gmArgsObj as $key => $value) {
 			$this->handlerMap[$key] = new GM_OpObject(
 			array('className'=>$handlerClass,'methodName'=>
 					'handle_'.$key),$value);
 		}
-
+		foreach ($cmd_cltArgsObj as $key => $value) {
+			$this->handlerMap[$key] = new GM_OpObject(
+			array('className'=>$handlerClass,'methodName'=>
+					'handle_'.$key),$value);
+		}
 	}
 
 	function __construct(){
