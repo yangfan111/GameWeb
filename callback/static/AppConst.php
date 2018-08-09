@@ -14,8 +14,10 @@ class AppConst {
 	const SERVER_CONFIG = '/config/serverList.json';
 	const GM_CMD_CONFIG = '/config/gmCmdArgs.json';
 	const MESSAGE_CONFIG = '/config/messageList.json';
-	const GM_HANDLER_CLASS = 'GM_CMDHanlder';
-	const LOG_IO = '/log/io';
+	const GM_HANDLER_CLASS = 'AppCMDHanlder';
+	const LOG_GM = '/log/io/gm';
+	const LOG_CLT = '/log/io/clt';
+	const LOG_ERR = '/log/err';
 	const LOG_FLAG_INPUT = 'Request';
 	const LOG_FLAG_OUTPUT = 'Response';
 

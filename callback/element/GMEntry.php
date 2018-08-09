@@ -19,7 +19,7 @@ public function GetGMObject()
 }
 class MessageBodyInfo extends GMEntry
 {
-	public $languageID;
+	public $languageId;
 	public $title;
 	public $content;
 

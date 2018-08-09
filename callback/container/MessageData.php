@@ -28,8 +28,9 @@ class MessageData {
 	public function getCltMessageList($langId)
 	{
 		$gmMsgArr = array();
-
+	
 		foreach ($this->messageList as $key =>$value) {
+
 			$msgObj = $value->getCltObject($langId);
 			if(isset($msgObj['messageBody']))
 				array_push($gmMsgArr, $msgObj);
@@ -53,7 +54,7 @@ class MessageData {
 		$messageSafeArr = array_map(function ($element) {
 			return $element->getGMObject();
 		}, $this->messageList);
-
+		
 		$anonObj->{'messages'} = array_values($messageSafeArr);
 		//var_dump($anonObj);
 		Util::jsonFileEncode($anonObj, dirname(dirname(__FILE__)) . AppConst::MESSAGE_CONFIG);

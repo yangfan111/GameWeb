@@ -23,34 +23,15 @@ class GM_Entrance {
 	public static function init() {
 
 		AppRegistry::excute();
-		self::$gm_Checker = new GM_Checker();
-		self::$gm_Mgr = new GM_Mgr();
-		self::$gm_Result = new GM_Result();
-		self::$gm_Logger = new GM_Log();
+		self::$gm_Checker = new AppChecker();
+		self::$gm_Mgr = new AppMgr();
+		self::$gm_Result = new AppResult();
+		self::$gm_Logger = new AppLogger();
 
 	}
 	public static function process($gmJson) {
 
-	// if (!self::$initialize) {
-	// 		self::$initialize = false;
-	// 		self::init();
-	// 	}
-	//	$formatStr = date("[H:i:s] ") . "\n" . '<' . $logFlag . '>' . "\n";
-		// $fstFileDir = dirname(__FILE__) . AppConst::LOG_IO;
-		// $scdFileDir = date("[Y-m-d]");
-		// //每次请求产生一次log文件
-		// $fileName = 'gm_' . 'ffffff' . '.log';
-		// $filePath = Util::toFormatPath($fstFileDir . DIRECTORY_SEPARATOR . $scdFileDir . DIRECTORY_SEPARATOR . $fileName);
-		// Util::makeDir($filePath);
-	//	print_r("write " . $filePath . "\n");
-		
-	//	file_put_contents($filePath, $formatStr, FILE_APPEND); //添加消息头
 
-	//	file_put_contents($filePath, (string) $gmJson . "\n", FILE_APPEND); //消息体
-
-		//$testJson = file_get_contents(dirname(__FILE__) . '/config/test.json');
-
-		//$gmObject = json_decode($gmJson);
 
 		if (!self::$initialize) {
 			self::$initialize = false;
@@ -64,13 +45,13 @@ class GM_Entrance {
 				'data' => Util::anon_class(),
 			);
 		}
-		//self::$gm_Result->testExc(self::$gm_Logger,$testJson);
+	
 		self::$gm_Result->beforeExc(self::$gm_Logger, $gmJson);
 		$processRet = self::realProcess($gmJson);
 		//封装操作结果
 		$finalResp = self::$gm_Result->wrapPostRet($processRet);
 		$finalRespJson = json_encode($finalResp);
-		self::$gm_Result->afterExc(self::$gm_Logger, $finalRespJson);
+		self::$gm_Result->afterExc(self::$gm_Logger,$finalRespJson,$finalResp['code'] !=1);
 
 		return $finalRespJson;
 	}
@@ -100,7 +81,7 @@ class GM_Entrance {
 
 			self::$gm_Result->pushErrorObj($dataRet);
 			return;
-		}
+		}	
 		return $dataRet;
 		//$postData =	self::$gm_Result->wrapPostData($dataRet);
 		//return json_encode($postData);

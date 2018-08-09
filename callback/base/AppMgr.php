@@ -1,7 +1,7 @@
 <?php
 
 //管理器
-class GM_Mgr{
+class AppMgr{
 
 	public $handlerMap = array();//处理接口
 	
@@ -16,16 +16,16 @@ class GM_Mgr{
 		$cmd_gmArgsObj = $cmdConfigObj->gm;
 		$cmd_cltArgsObj = $cmdConfigObj->client;
 
-		$handlerClass = 'GM_CMDHandler';
+		$handlerClass = 'AppCMDHandler';
 		foreach ($cmd_gmArgsObj as $key => $value) {
-			$this->handlerMap[$key] = new GM_OpObject(
+			$this->handlerMap[$key] = new CMDOpObject(
 			array('className'=>$handlerClass,'methodName'=>
-					'handle_'.$key),$value);
+					'handle_'.$key),$value,'gm');
 		}
 		foreach ($cmd_cltArgsObj as $key => $value) {
-			$this->handlerMap[$key] = new GM_OpObject(
+			$this->handlerMap[$key] = new CMDOpObject(
 			array('className'=>$handlerClass,'methodName'=>
-					'handle_'.$key),$value);
+					'handle_'.$key),$value,'clt');
 		}
 	}
 

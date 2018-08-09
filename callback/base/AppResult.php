@@ -1,8 +1,8 @@
 <?php
-class GM_Result {
+class AppResult {
 	public $errObj;
 	private $webLockTag = false;
-
+	private $reqJson;
 	public function wrapPostRet($processRet) {
 		if (!isset($processRet) || is_bool($processRet)) {
 			$processRet = Util::anon_class();
@@ -19,16 +19,17 @@ class GM_Result {
 	{
 		$gm_Logger->writeTargetLog($testJson);
 	}
-	public function beforeExc($gm_Logger, $gmJson) {
+	public function beforeExc($gm_Logger, $gmJson,$writeErr=false) {
 		$this->webLockTag = true;
 		$this->errObj = ErrorObject::genErr(1);
-		
-		$gm_Logger->init_tag();
-		$gm_Logger->writeGMLog($gmJson, AppConst::LOG_FLAG_INPUT);
-	}
-	public function afterExc($gm_Logger, $gmJson) {
 
-		$gm_Logger->writeGMLog($gmJson, AppConst::LOG_FLAG_OUTPUT);
+		$gm_Logger->init_tag();
+		$this->reqJson= $gmJson;
+		$gm_Logger->writeGMLog($gmJson, AppConst::LOG_FLAG_INPUT,$writeErr);
+	}
+	public function afterExc($gm_Logger, $gmJson,$writeErr) {
+
+		$gm_Logger->writeGMLog($gmJson, AppConst::LOG_FLAG_OUTPUT,$writeErr);
 		$this->webLockTag = false;
 		$this->errObj = null;
 	}

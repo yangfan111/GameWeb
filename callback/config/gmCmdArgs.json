@@ -5,7 +5,7 @@
      	"server_changeGameServerState" : 
     		["gameAppId","gameServerCode","gameServerState"],
 	 	"message_push":
-	 		["messageId","gameAppId","messageName","publishTypeCode","receiveType","startTime","isGlobalSync","messageBodyList","hasUserList"],
+	 		["messageId","gameAppId","messageName","publishTypeCode","receiveType","startTime","isGlobalSync","messageBodyList"],
 	  	"message_disable":
 	  		["messageId","gameAppId"]
 

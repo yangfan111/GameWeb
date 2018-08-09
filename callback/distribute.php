@@ -8,7 +8,7 @@ $jsonObj = file_get_contents('php://input');
 //print_r($jsonObj);
 
 $ret = GM_Entrance::process($jsonObj);
-//$gm = new GM_Mgr();
+//$gm = new AppMgr();
 //$gm->initConfig();init_tag
 
 echo ($ret);

@@ -24,19 +24,555 @@
 	"buffers":
 	[
 		{
-			"file": "GameWeb.sublime-project",
+			"file": "callback/distribute.php",
 			"settings":
 			{
-				"buffer_size": 45,
+				"buffer_size": 356,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[16:25:47]\n<Request>\n\n[16:25:47]\n<Response>\n{\"code\":5,\"message\":\"\\u8bf7\\u6c42\\u7684json\\u7ed3\\u6784\\u89e3\\u6790\\u51fa\\u9519\",\"data\":{}}\n",
+			"file": "callback/log/err/[2018-08-08]/[16-25-47].log",
+			"file_size": 136,
+			"file_write_time": 131781903885833010,
+			"settings":
+			{
+				"buffer_size": 136,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "recent.json",
+			"file": "callback/config/serverList.json",
 			"settings":
 			{
-				"buffer_size": 254,
+				"buffer_size": 1538,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Administrator/Desktop/nginx.conf",
+			"settings":
+			{
+				"buffer_size": 5350,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/F/demo/src/GameLogic/3rd/SZ_MessageEmitter.ts",
+			"settings":
+			{
+				"buffer_size": 8123,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "callback/config/gmCmdArgs.json",
+			"settings":
+			{
+				"buffer_size": 441,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "callback/GM_Entrance.php",
+			"settings":
+			{
+				"buffer_size": 2084,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "callback/base/AppCMDHandler.php",
+			"settings":
+			{
+				"buffer_size": 1159,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "callback/container/MessageData.php",
+			"settings":
+			{
+				"buffer_size": 2115,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\n/*\n * 账号平台数据库配置\n */\nclass MessageInfo extends GMEntry\n{\n\t//数据库ip\n\tpublic  $gameAppId = AppConst::APP_ID;\n\t//游戏服务器编号\n\tpublic  $messageId;\n\t//游戏服务器名字\n\tpublic  $messageName;\n\t\n\tpublic $gameServerCode;\n\t\n\tpublic $publishTypeCode;\n\t\n\tpublic $receiveType;\n\t\n\tpublic $startTime;\n\t\n\t\n \tpublic $isGlobalSync;\n\t\n\tpublic $messageBodyList;//消息体列表\n\t\n\tpublic $hasUserList;\n\t\n\t//optional \n\tpublic $intervalDay;\n\tpublic $endTime;\n\tpublic $messageDetailUrl;\n\tpublic $itemList;\n\tpublic $serverCodeList;\n\tpublic $channelCodeList;\n\tpublic $playerCount;\n\tpublic $filePath;\n\tfunction getCltObject($langId)\n\t{\t\n\n\t\treturn array(\n\t\t\t'messageName'=>$this->messageName,\n\t\t\t'messageBody'=>$this->_findLangBody($langId)\n\t\t);\n\n\t}\n\tprivate function _findLangBody($langId)\n\t{\n\t\tforeach ($this->messageBodyList as $value) {\n\t\t\tif($value->{'languageId'} == $langId)\n\t\t\t{\n\t\t\t\treturn $value; \n\t\t\t}\n\t\t}\n\t\t\n\t}\n\t\n//\tfunction getGMObject(){\n//\t  return array(\n//\t\t\n//\t\t\t'gameServerCode'=>$this->gameServerCode,\n//\t\t\t'gameAppId'=> $this->gameAppId,\n//\t\t\t'gameServerName'=> $this->gameServerName,\n//\t\t\t'gameServerState'=> $this->gameServerState,\n//\t\t);\n//\t}\n\n\n\t\n}\n\n\n",
+			"file": "callback/element/MessageInfo.php",
+			"file_size": 1266,
+			"file_write_time": 131781929747342203,
+			"settings":
+			{
+				"buffer_size": 1131,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:04:11]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":8006,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":1001,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[17:04:11]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-04-11].log",
+			"file_size": 479,
+			"file_write_time": 131781926518597530,
+			"settings":
+			{
+				"buffer_size": 455,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:04:38]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":8006,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":1002,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[17:04:38]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-04-38].log",
+			"file_size": 479,
+			"file_write_time": 131781926780462507,
+			"settings":
+			{
+				"buffer_size": 455,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:05:42]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":8006,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":1003,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[17:05:42]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-05-42].log",
+			"file_size": 479,
+			"file_write_time": 131781927422659239,
+			"settings":
+			{
+				"buffer_size": 455,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:09:19]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[17:09:19]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-09-19].log",
+			"file_size": 1477,
+			"file_write_time": 131781929595343509,
+			"settings":
+			{
+				"buffer_size": 1467,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:10:27]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[17:10:27]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-10-27].log",
+			"file_size": 1477,
+			"file_write_time": 131781930272712253,
+			"settings":
+			{
+				"buffer_size": 1467,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:14:57]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[17:14:57]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-14-57].log",
+			"file_size": 1477,
+			"file_write_time": 131781932978257001,
+			"settings":
+			{
+				"buffer_size": 1467,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:15:07]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[17:15:07]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-15-07].log",
+			"file_size": 1477,
+			"file_write_time": 131781933077092654,
+			"settings":
+			{
+				"buffer_size": 1467,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:15:51]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[17:15:51]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-15-51].log",
+			"file_size": 1477,
+			"file_write_time": 131781933513307604,
+			"settings":
+			{
+				"buffer_size": 1467,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:15:56]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[17:15:56]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-15-56].log",
+			"file_size": 1477,
+			"file_write_time": 131781933565150569,
+			"settings":
+			{
+				"buffer_size": 1467,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:16:08]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[17:16:08]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-16-08].log",
+			"file_size": 1477,
+			"file_write_time": 131781933686287498,
+			"settings":
+			{
+				"buffer_size": 1467,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:16:29]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":82006,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":1003,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[17:16:29]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-16-29].log",
+			"file_size": 480,
+			"file_write_time": 131781933895409459,
+			"settings":
+			{
+				"buffer_size": 456,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:16:34]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[17:16:34]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-16-34].log",
+			"file_size": 1477,
+			"file_write_time": 131781933949852573,
+			"settings":
+			{
+				"buffer_size": 1467,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:17:29]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":82006,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":1003,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[17:17:29]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-17-29].log",
+			"file_size": 480,
+			"file_write_time": 131781934494633733,
+			"settings":
+			{
+				"buffer_size": 456,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:17:37]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":820026,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":1003,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[17:17:37]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{}}\n",
+			"file": "callback/log/err/[2018-08-08]/[17-17-37].log",
+			"file_size": 481,
+			"file_write_time": 131781934578868551,
+			"settings":
+			{
+				"buffer_size": 457,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[19:09:13]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":820026,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":1003,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[19:09:13]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{}}\n",
+			"file": "callback/log/err/[2018-08-08]/[19-09-13].log",
+			"file_size": 481,
+			"file_write_time": 131782001539798497,
+			"settings":
+			{
+				"buffer_size": 457,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[19:09:19]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":1111,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":1003,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[19:09:19]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{}}\n",
+			"file": "callback/log/err/[2018-08-08]/[19-09-19].log",
+			"file_size": 479,
+			"file_write_time": 131782001593011540,
+			"settings":
+			{
+				"buffer_size": 455,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[19:09:30]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[19:09:30]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/err/[2018-08-08]/[19-09-30].log",
+			"file_size": 1283,
+			"file_write_time": 131782001701427742,
+			"settings":
+			{
+				"buffer_size": 1273,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[19:09:32]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[19:09:32]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/err/[2018-08-08]/[19-09-32].log",
+			"file_size": 1283,
+			"file_write_time": 131782001722968974,
+			"settings":
+			{
+				"buffer_size": 1273,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[19:09:41]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":1fff111,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":1003,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[19:09:41]\n<Response>\n{\"code\":5,\"message\":\"\\u8bf7\\u6c42\\u7684json\\u7ed3\\u6784\\u89e3\\u6790\\u51fa\\u9519\",\"data\":{}}\n",
+			"file": "callback/log/err/[2018-08-08]/[19-09-41].log",
+			"file_size": 528,
+			"file_write_time": 131782001815864287,
+			"settings":
+			{
+				"buffer_size": 504,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[19:09:51]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":1111,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":11111,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[19:09:51]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{}}\n",
+			"file": "callback/log/err/[2018-08-08]/[19-09-51].log",
+			"file_size": 480,
+			"file_write_time": 131782001915249971,
+			"settings":
+			{
+				"buffer_size": 456,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[19:09:56]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[19:09:56]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/err/[2018-08-08]/[19-09-56].log",
+			"file_size": 1380,
+			"file_write_time": 131782001966382896,
+			"settings":
+			{
+				"buffer_size": 1370,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[19:10:03]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[19:10:03]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/err/[2018-08-08]/[19-10-03].log",
+			"file_size": 1380,
+			"file_write_time": 131782002035286837,
+			"settings":
+			{
+				"buffer_size": 1370,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[19:10:11]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":1111,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":111hggf11,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[19:10:11]\n<Response>\n{\"code\":5,\"message\":\"\\u8bf7\\u6c42\\u7684json\\u7ed3\\u6784\\u89e3\\u6790\\u51fa\\u9519\",\"data\":{}}\n",
+			"file": "callback/log/err/[2018-08-08]/[19-10-11].log",
+			"file_size": 530,
+			"file_write_time": 131782002112051228,
+			"settings":
+			{
+				"buffer_size": 506,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[19:10:15]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":1111,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":9999,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[19:10:15]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{}}\n",
+			"file": "callback/log/err/[2018-08-08]/[19-10-15].log",
+			"file_size": 479,
+			"file_write_time": 131782002157753842,
+			"settings":
+			{
+				"buffer_size": 455,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[19:10:25]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[19:10:25]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/err/[2018-08-08]/[19-10-25].log",
+			"file_size": 1477,
+			"file_write_time": 131782002250309136,
+			"settings":
+			{
+				"buffer_size": 1467,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:04:11]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":8006,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":1001,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[17:04:11]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{}}\n",
+			"file": "callback/log/io/gm/[2018-08-08]/17h/gm[17-04-11].log",
+			"file_size": 479,
+			"file_write_time": 131781926518597530,
+			"settings":
+			{
+				"buffer_size": 455,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:04:38]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":8006,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":1002,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[17:04:38]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{}}\n",
+			"file": "callback/log/io/gm/[2018-08-08]/17h/gm[17-04-38].log",
+			"file_size": 479,
+			"file_write_time": 131781926780452507,
+			"settings":
+			{
+				"buffer_size": 455,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:05:42]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"message_push\",\n\"data\": {\n\t\"gameAppId\":8006,\n\n\t\"messageName\":\"abcfff\",\n\n\t\"messageId\":1003,\n\t\"publishTypeCode\":10,\n\t\"receiveType\":2,\n\t\"startTime\":\"1500000000\",\n\t\"isGlobalSync\":1,\n\t\"messageBodyList\":[\n\t\t{\n\t\t\t\"languageId\":1,\n\t\t\t\"tittle\":\"test\",\n\t\t\t\"content\":\"test content\"\n\t\t}\n\t\t\n\t],\n\t\"hasUserList\":2\n}\n}\n[17:05:42]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{}}\n",
+			"file": "callback/log/io/gm/[2018-08-08]/17h/gm[17-05-42].log",
+			"file_size": 479,
+			"file_write_time": 131781927422639238,
+			"settings":
+			{
+				"buffer_size": 455,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:09:19]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[17:09:19]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/io/gm/[2018-08-08]/17h/gm[17-09-19].log",
+			"file_size": 1477,
+			"file_write_time": 131781929595323508,
+			"settings":
+			{
+				"buffer_size": 1467,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[17:10:27]\n<Request>\n{\n\"timestamp\": 1500000000,\n\"sign\": \"AFdasfhk32rdsgv\",\n\"action\": \"clientWebData\",\n\"data\": {\n\t\"gameAppId\":8006,\n\t\"guid\":\"1111\",\n\t\"langId\":1,\n\t\"channel\":\"channel_DEV\"\n}\n}\n[17:10:27]\n<Response>\n{\"code\":1,\"message\":\"\\u6210\\u529f\",\"data\":{\"gameServerList\":[{\"gameAppId\":8006,\"gameServerCode\":\"1\",\"gameServerName\":\"Wildest Dreams\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"2\",\"gameServerName\":\"QA\",\"url\":\"http:\\/\\/wd-cb.shinezone.com\\/server\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"3\",\"gameServerName\":\"public test\",\"url\":\"http:\\/\\/172.16.0.242:8361\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"4\",\"gameServerName\":\"dev_yf\",\"url\":\"http:\\/\\/172.16.50.125:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"5\",\"gameServerName\":\"dev_ss\",\"url\":\"http:\\/\\/172.16.51.175:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"6\",\"gameServerName\":\"test_lc\",\"url\":\"http:\\/\\/172.16.50.32:8360\",\"gameServerState\":1},{\"gameAppId\":8006,\"gameServerCode\":\"7\",\"gameServerName\":\"dev_xwj\",\"url\":\"http:\\/\\/172.16.52.102:8360\",\"gameServerState\":1}],\"gameMessageList\":[{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}},{\"messageName\":\"abcfff\",\"messageBody\":{\"languageId\":1,\"tittle\":\"test\",\"content\":\"test content\"}}]}}\n",
+			"file": "callback/log/io/gm/[2018-08-08]/17h/gm[17-10-27].log",
+			"file_size": 1477,
+			"file_write_time": 131781930272702252,
+			"settings":
+			{
+				"buffer_size": 1467,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "callback/container/ServerData.php",
+			"settings":
+			{
+				"buffer_size": 1078,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "callback/element/GMEntry.php",
+			"settings":
+			{
+				"buffer_size": 366,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "callback/base/AppResult.php",
+			"settings":
+			{
+				"buffer_size": 1313,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "callback/base/AppLogger.php",
+			"settings":
+			{
+				"buffer_size": 2332,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "callback/static/Util.php",
+			"settings":
+			{
+				"buffer_size": 3826,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "callback/config/messageList.json",
+			"settings":
+			{
+				"buffer_size": 322,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "#!/bin/bash\n\n./stop.sh\n./start.sh &\n\n",
+			"file": "/G/服务器原始数据备份1/stable2/restart.sh",
+			"file_size": 36,
+			"file_write_time": 131617732803005400,
+			"settings":
+			{
+				"buffer_size": 37,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/F/WildestDreams-Release/restart.sh",
+			"settings":
+			{
+				"buffer_size": 34,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/F/WildestDreams-Release/deploy.sh",
+			"settings":
+			{
+				"buffer_size": 16,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/G/服务器原始数据备份1/stable2/start.sh",
+			"settings":
+			{
+				"buffer_size": 276,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/G/服务器原始数据备份1/stable2/stop.sh",
+			"settings":
+			{
+				"buffer_size": 69,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "callback/element/ErrorObject.php",
+			"settings":
+			{
+				"buffer_size": 5534,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "callback/base/AppMgr.php",
+			"settings":
+			{
+				"buffer_size": 2571,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "callback/static/AppConst.php",
+			"settings":
+			{
+				"buffer_size": 1286,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -126,10 +662,65 @@
 	},
 	"expanded_folders":
 	[
-		"/G/GitHub/GameWeb"
+		"/G/GitHub/GameWeb",
+		"/G/GitHub/GameWeb/callback",
+		"/G/GitHub/GameWeb/callback/base",
+		"/G/GitHub/GameWeb/callback/config",
+		"/G/GitHub/GameWeb/callback/container"
 	],
 	"file_history":
 	[
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/17h/gm[17-14-57].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/17h/gm[17-15-07].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/17h/gm[17-15-51].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/17h/gm[17-15-56].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/17h/gm[17-16-08].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/17h/gm[17-16-29].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/17h/gm[17-16-34].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/17h/gm[17-17-29].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/17h/gm[17-17-37].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/19h/gm[19-09-13].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/19h/gm[19-09-19].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/19h/gm[19-09-30].log",
+		"/G/GitHub/GameWeb/ServerAppConstGM_CMD_CONFIG",
+		"/G/GitHub/GameWeb/.tags_sorted_by_file",
+		"/G/GitHub/GameWeb/.tags",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/19h/gm[19-09-32].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/19h/gm[19-09-41].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/19h/gm[19-09-51].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/19h/gm[19-09-56].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/19h/gm[19-10-03].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/19h/gm[19-10-11].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/19h/gm[19-10-15].log",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/19h/gm[19-10-25].log",
+		"/F/WildestDreams-Release/restart.sh",
+		"/F/WildestDreams-Release/version.txt",
+		"/G/GitHub/GameWeb/callback/config/messageList.json",
+		"/G/GitHub/GameWeb/callback/config/gmCmdArgs.json",
+		"/G/GitHub/GameWeb/callback/base/Mysql.php",
+		"/G/GitHub/GameWeb/callback/base/AppResult.php",
+		"/G/GitHub/GameWeb/Server/GM_Entrance.php",
+		"/G/GitHub/GameWeb/callback/callback.zip",
+		"/G/GitHub/GameWeb/Server/base/AppLogger.php",
+		"/G/GitHub/GameWeb/Server/base/AppResult.php",
+		"/G/GitHub/GameWeb/callback/log/io/gm/[2018-08-08]/15h/gm[15-03-18].log",
+		"/G/GitHub/GameWeb/Server/base/AppChecker.php",
+		"/G/GitHub/GameWeb/Server/distribute.php",
+		"/G/GitHub/GameWeb/Server/static/AppConst.php",
+		"/G/GitHub/GameWeb/Server/base/AppCMDHandler.php",
+		"/G/GitHub/GameWeb/Server/base/AppMgr.php",
+		"/G/GitHub/GameWeb/Server/element/CMDOpObject.php",
+		"/G/GitHub/GameWeb/Server/base/test.php",
+		"/G/GitHub/GameWeb/Server/static/AppRegistry.php",
+		"/G/GitHub/GameWeb/Server/container/MessageData.php",
+		"/G/GitHub/GameWeb/Server/element/GM_OpObject.php",
+		"/G/GitHub/GameWeb/Server/base/Mysql.php",
+		"/G/GitHub/GameWeb/GameWeb.sublime-project",
+		"/G/GitHub/GameWeb/Server/container/ServerData.php",
+		"/G/GitHub/GameWeb/weakendLog.txt",
+		"/G/GitHub/GameWeb/Server/base/GM_Result.php",
+		"/G/GitHub/GameWeb/Server/base/GM_CMDHandler.php",
+		"/G/GitHub/GameWeb/Server/base/GM_Mgr.php",
 		"/G/GitHub/html/game_operating_platform/contrib/function/function_core.php",
 		"/G/GitHub/html/game_operating_platform/api/base/api_app.php",
 		"/G/GitHub/html/game_operating_platform/api/struct/api_result.php",
@@ -148,9 +739,7 @@
 		"/G/GitHub/GameWeb/Server/static/Util.php",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
 		"/G/GitHub/GameWeb/Server/config/cmd.json",
-		"/G/GitHub/GameWeb/Server/base/GM_CMDHandler.php",
 		"/F/WildestDreams-Common/Output/Network/Packet/User.cs",
-		"/G/GitHub/GameWeb/Server/GM_Entrance.php",
 		"/C/wamp/bin/php/php5.3.0/php.ini",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/DocBlockr/README.md",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Base File.sublime-settings",
@@ -169,9 +758,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 108.0,
+		"height": 130.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -179,6 +769,27 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"languageID",
+			"php",
+			"80126",
+			"log",
+			"print_r",
+			"print",
+			"init_tag",
+			"unique_tag",
+			"gm_unique_tag",
+			"GM_OpObject",
+			"GM_Result",
+			"GM_Mgr",
+			"GM_CMDHandler",
+			"AppLogger",
+			"GM_Checker",
+			"GM_Log",
+			"GM_Logger",
+			"WebLogger",
+			"GM_Log",
+			"channelList",
+			"server"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -186,6 +797,16 @@
 		"regex": false,
 		"replace_history":
 		[
+			"languageId",
+			"unique_tag",
+			"CMDOpObject",
+			"AppResult",
+			"AppMgr",
+			"AppCMDHandler",
+			"AppChecker",
+			"AppLogger",
+			"WebLogger",
+			""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -196,24 +817,390 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 38,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "GameWeb.sublime-project",
+					"file": "callback/distribute.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 45,
+						"buffer_size": 356,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								45,
-								45
+								337,
+								337
+							]
+						],
+						"settings":
+						{
+							"SL.112.region_keys":
+							[
+							],
+							"SL.175.region_keys":
+							[
+							],
+							"SL.69.region_keys":
+							[
+							],
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 49,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "callback/log/err/[2018-08-08]/[16-25-47].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								136,
+								136
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 51,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "callback/config/serverList.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1538,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								716,
+								716
 							]
 						],
 						"settings":
@@ -227,8 +1214,503 @@
 								{
 									"1":
 									[
-										43,
-										44
+										772,
+										773
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										640,
+										641
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										772,
+										773
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										640,
+										641
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 38,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/Administrator/Desktop/nginx.conf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5350,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5037,
+								5041
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 37,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/F/demo/src/GameLogic/3rd/SZ_MessageEmitter.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8123,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2014,
+								2014
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 36,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "callback/config/gmCmdArgs.json",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 441,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": 54,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										440,
+										441
 									]
 								},
 								"icon":
@@ -253,61 +1735,61 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
 							],
 							"bracket_highlighter.locations":
 							{
@@ -326,61 +1808,61 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
 							],
 							"origin_encoding": "ASCII",
 							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
@@ -389,24 +1871,1744 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 35,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "recent.json",
-					"semi_transient": true,
+					"buffer": 6,
+					"file": "callback/GM_Entrance.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 254,
+						"buffer_size": 2084,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								132,
-								132
+								1334,
+								1334
+							]
+						],
+						"settings":
+						{
+							"SL.113.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.178.region_keys":
+							[
+							],
+							"SL.70.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2079,
+										2080
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1332,
+										1333
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 296.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 50,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "callback/base/AppCMDHandler.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								679,
+								692
+							]
+						],
+						"settings":
+						{
+							"SL.192.region_keys":
+							[
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1154,
+										1155
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										909,
+										910
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										704,
+										705
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										611,
+										612
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 26.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 48,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "callback/container/MessageData.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								668,
+								680
+							]
+						],
+						"settings":
+						{
+							"SL.197.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.34.region_keys":
+							[
+							],
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										522,
+										523
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										368,
+										369
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										688,
+										689
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										680,
+										681
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 34,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "callback/element/MessageInfo.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								814,
+								824
+							]
+						],
+						"settings":
+						{
+							"SL.199.region_keys":
+							[
+							],
+							"SL.35.region_keys":
+							[
+							],
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1127,
+										1128
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										61,
+										62
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										824,
+										825
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/single_quote.png",
+										"region.greenish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										813,
+										814
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 330.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 33,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "callback/log/err/[2018-08-08]/[17-04-11].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 32,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "callback/log/err/[2018-08-08]/[17-04-38].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 31,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "callback/log/err/[2018-08-08]/[17-05-42].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 30,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "callback/log/err/[2018-08-08]/[17-09-19].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 29,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "callback/log/err/[2018-08-08]/[17-10-27].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 28,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "callback/log/err/[2018-08-08]/[17-14-57].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "callback/log/err/[2018-08-08]/[17-15-07].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 26,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "callback/log/err/[2018-08-08]/[17-15-51].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "callback/log/err/[2018-08-08]/[17-15-56].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "callback/log/err/[2018-08-08]/[17-16-08].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "callback/log/err/[2018-08-08]/[17-16-29].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "callback/log/err/[2018-08-08]/[17-16-34].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "callback/log/err/[2018-08-08]/[17-17-29].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "callback/log/err/[2018-08-08]/[17-17-37].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 457,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "callback/log/err/[2018-08-08]/[19-09-13].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 457,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "callback/log/err/[2018-08-08]/[19-09-19].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "callback/log/err/[2018-08-08]/[19-09-30].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "callback/log/err/[2018-08-08]/[19-09-32].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "callback/log/err/[2018-08-08]/[19-09-41].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 504,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "callback/log/err/[2018-08-08]/[19-09-51].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "callback/log/err/[2018-08-08]/[19-09-56].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1370,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "callback/log/err/[2018-08-08]/[19-10-03].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1370,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 32,
+					"file": "callback/log/err/[2018-08-08]/[19-10-11].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 33,
+					"file": "callback/log/err/[2018-08-08]/[19-10-15].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 34,
+					"file": "callback/log/err/[2018-08-08]/[19-10-25].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 35,
+					"file": "callback/log/io/gm/[2018-08-08]/17h/gm[17-04-11].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 36,
+					"file": "callback/log/io/gm/[2018-08-08]/17h/gm[17-04-38].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 37,
+					"file": "callback/log/io/gm/[2018-08-08]/17h/gm[17-05-42].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 38,
+					"file": "callback/log/io/gm/[2018-08-08]/17h/gm[17-09-19].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								188,
+								199
 							]
 						],
 						"settings":
@@ -417,18 +3619,1375 @@
 							{
 								"close":
 								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 39,
+					"file": "callback/log/io/gm/[2018-08-08]/17h/gm[17-10-27].log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								159,
+								159
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 40,
+					"file": "callback/container/ServerData.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1078,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								599,
+								554
+							]
+						],
+						"settings":
+						{
+							"SL.193.region_keys":
+							[
+							],
+							"SL.36.region_keys":
+							[
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
 									"1":
 									[
-										252,
-										253
+										452,
+										453
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/square_bracket.png",
-										"region.bluish"
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										370,
+										371
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										704,
+										705
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										553,
+										554
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 41,
+					"file": "callback/element/GMEntry.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								210,
+								210
+							]
+						],
+						"settings":
+						{
+							"SL.60.region_keys":
+							[
+							],
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										209,
+										210
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										208,
+										209
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 42,
+					"file": "callback/base/AppResult.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1313,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								735,
+								735
+							]
+						],
+						"settings":
+						{
+							"SL.115.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.38.region_keys":
+							[
+							],
+							"SL.74.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.98.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										734,
+										735
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										536,
+										537
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										734,
+										735
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										536,
+										537
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"history_list_is_closing": true,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 140.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 43,
+					"file": "callback/base/AppLogger.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2332,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1307,
+								1307
+							]
+						],
+						"settings":
+						{
+							"SL.116.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.180.region_keys":
+							[
+							],
+							"SL.87.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1306,
+										1307
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1296,
+										1297
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1306,
+										1307
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1296,
+										1297
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 40,
+					"type": "text"
+				},
+				{
+					"buffer": 44,
+					"file": "callback/static/Util.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3826,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								970,
+								956
+							]
+						],
+						"settings":
+						{
+							"SL.140.region_keys":
+							[
+							],
+							"SL.181.region_keys":
+							[
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1085,
+										1086
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										993,
+										994
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										3824,
+										3825
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										17,
+										18
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 41,
+					"type": "text"
+				},
+				{
+					"buffer": 45,
+					"file": "callback/config/messageList.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 322,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								322,
+								322
+							]
+						],
+						"settings":
+						{
+							"SL.198.region_keys":
+							[
+							],
+							"auto_complete": true,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": 198,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										321,
+										322
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
 									]
 								},
 								"open":
@@ -445,61 +5004,1141 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 39,
+					"type": "text"
+				},
+				{
+					"buffer": 46,
+					"file": "/G/服务器原始数据备份1/stable2/restart.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 37,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12,
+								12
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": 200,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": true,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 44,
+					"type": "text"
+				},
+				{
+					"buffer": 47,
+					"file": "/F/WildestDreams-Release/restart.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 34,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								34,
+								34
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 42,
+					"type": "text"
+				},
+				{
+					"buffer": 48,
+					"file": "/F/WildestDreams-Release/deploy.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16,
+								16
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 43,
+					"type": "text"
+				},
+				{
+					"buffer": 49,
+					"file": "/G/服务器原始数据备份1/stable2/start.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								276,
+								276
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 45,
+					"type": "text"
+				},
+				{
+					"buffer": 50,
+					"file": "/G/服务器原始数据备份1/stable2/stop.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 69,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32,
+								29
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": 202,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 46,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 51,
+					"file": "callback/element/ErrorObject.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								291,
+								291
+							]
+						],
+						"settings":
+						{
+							"SL.118.region_keys":
+							[
+							],
+							"SL.93.region_keys":
+							[
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
 							"bracket_highlighter.locations":
 							{
@@ -507,24 +6146,24 @@
 								{
 									"1":
 									[
-										158,
-										159
+										310,
+										311
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/double_quote.png",
-										"region.greenish"
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
 									]
 								},
 								"open":
 								{
 									"1":
 									[
-										113,
-										114
+										280,
+										281
 									]
 								},
 								"unmatched":
@@ -533,70 +6172,507 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 53,
+					"type": "text"
+				},
+				{
+					"buffer": 52,
+					"file": "callback/base/AppMgr.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								66,
+								66
+							]
+						],
+						"settings":
+						{
+							"SL.153.region_keys":
+							[
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2212,
+										2213
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										25,
+										26
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2212,
+										2213
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										25,
+										26
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 52,
+					"type": "text"
+				},
+				{
+					"buffer": 53,
+					"file": "callback/static/AppConst.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1286,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								606,
+								606
+							]
+						],
+						"settings":
+						{
+							"SL.105.region_keys":
+							[
+							],
+							"SL.119.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.185.region_keys":
+							[
+							],
+							"SL.49.region_keys":
+							[
+							],
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										671,
+										672
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										543,
+										544
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										671,
+										672
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										543,
+										544
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 47,
 					"type": "text"
 				}
 			]
@@ -619,11 +6695,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.969987995198,
 			1.0
 		],
 		"rows":
@@ -639,7 +6722,7 @@
 	},
 	"output.exec":
 	{
-		"height": 327.0
+		"height": 357.0
 	},
 	"output.find_results":
 	{
@@ -649,7 +6732,7 @@
 	"project": "GameWeb.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 73.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -659,15 +6742,15 @@
 		"selected_items":
 		[
 			[
+				"",
+				"Server\\GM_Entrance.php"
+			],
+			[
 				"lx_log",
 				"game_operating_platform\\contrib\\class\\lx_FileLog.php"
 			],
 			[
 				"LOG",
-				"game_operating_platform\\contrib\\class\\lx_FileLog.php"
-			],
-			[
-				"",
 				"game_operating_platform\\contrib\\class\\lx_FileLog.php"
 			]
 		],
@@ -694,12 +6777,16 @@
 	"selected_group": 0,
 	"settings":
 	{
+		"xdebug":
+		{
+			"hide_conflict": false
+		}
 	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 404.0,
+	"side_bar_width": 254.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

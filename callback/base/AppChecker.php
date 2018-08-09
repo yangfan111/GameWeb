@@ -1,7 +1,7 @@
 <?php
-class GM_Checker{
+class AppChecker{
 
-	public  function checkGMArgs($gmObject,GM_Mgr $gmMgr)
+	public  function checkGMArgs($gmObject,AppMgr $gmMgr)
 	{
 		//TODO:添加checkresult
 
@@ -16,7 +16,7 @@ class GM_Checker{
 		return $this->checkGMActionArgs($gmObject, $gmMgr);
 			
 	}
-	private function checkGMActionArgs($gmObject,GM_Mgr $gmMgr)
+	private function checkGMActionArgs($gmObject,AppMgr $gmMgr)
 	{
 		$mgr_handlerMap = $gmMgr->handlerMap;
 		if (!isset($mgr_handlerMap[$gmObject->{'action'}]))
@@ -38,7 +38,7 @@ class GM_Checker{
 		}
 		return true;
 	}
-	public function checkGMAcessState(GM_Result $gmResult)
+	public function checkGMAcessState(AppResult $gmResult)
 	{
 		return true;
 	//	return $gmResult->checkResultState();

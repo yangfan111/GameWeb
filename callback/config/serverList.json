@@ -10,45 +10,52 @@
         {
             "gameServerCode":"2",
             "gameServerName" : "QA",
-            "url":"http://172.16.0.242:8360"
+            "url":"http://wd-cb.shinezone.com/server"
  
         },
         {
             "gameServerCode":"3",
+            "gameServerName" : "wd-test",
+            "url":"http://wd-test.shinezone.com/server"
+ 
+        },
+        {
+            "gameServerCode":"4",
             "gameServerName" : "public test",
             "url":"http://172.16.0.242:8361"
   
         },
         {
-            "gameServerCode":"4",
+            "gameServerCode":"5",
             "gameServerName" : "dev_yf",
             "url":"http://172.16.50.125:8360"
 
         },
         {
-            "gameServerCode":"5",
+            "gameServerCode":"6",
             "gameServerName" : "dev_ss",
             "url":"http://172.16.51.175:8360"
       
         },
         {
-            "gameServerCode":"6",
+            "gameServerCode":"7",
             "gameServerName" : "test_lc",
             "url":"http://172.16.50.32:8360"
 
         },
         {
-            "gameServerCode":"7",
+            "gameServerCode":"8",
             "gameServerName" : "dev_xwj",
             "url":"http://172.16.52.102:8360"
 
         }
+      
     ],
     "ChannelList":
     [
         {
             "name":"channel_DEV",
-            "include":["1","2","3","4","5","6","7"]
+            "include":["1","2","3","4","5","6","7","8"]
         },
         {
             "name":"channel_CJ",
@@ -56,7 +63,7 @@
         },
         {
             "name":"channel_QA",
-            "include":["1","2"]
+            "include":["1","2","3"]
         }
     ]
 }

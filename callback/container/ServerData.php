@@ -3,13 +3,6 @@
 class ServerData{
 
 
-	private $channel_DEV = array("1","2","3","4","5","6","7");
-	private $channel_CJ=array("1");
-	private $channel_QA =array("1","2");
-
-
-	// const QA = 2;
-	// const CJ = 3;
 
 	public  $serverList =  array();
 	//当前服务器列表

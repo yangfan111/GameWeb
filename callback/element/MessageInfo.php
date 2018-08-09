@@ -48,7 +48,7 @@ class MessageInfo extends GMEntry
 	private function _findLangBody($langId)
 	{
 		foreach ($this->messageBodyList as $value) {
-			if($value->{'languageID'} == $langId)
+			if($value->{'languageId'} == $langId)
 			{
 				return $value; 
 			}

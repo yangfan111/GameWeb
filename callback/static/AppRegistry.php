@@ -15,18 +15,18 @@ class AppRegistry
 		{	
 			self::$registryInit = true;
 			$classArr	=  array(
-				'GM_Checker' => CLASS_ROOT.'/base/GM_Checker.php',
-				'GM_Log' =>CLASS_ROOT.'/base/GM_Log.php',
-				'GM_Mgr'=>CLASS_ROOT.'/base/GM_Mgr.php',
-				'GM_CMDHandler'=>CLASS_ROOT.'/base/GM_CMDHandler.php',
-	    		'GM_Result'=>CLASS_ROOT.'/base/GM_Result.php',
+				'AppChecker' => CLASS_ROOT.'/base/AppChecker.php',
+				'AppLogger' =>CLASS_ROOT.'/base/AppLogger.php',
+				'AppMgr'=>CLASS_ROOT.'/base/AppMgr.php',
+				'AppCMDHandler'=>CLASS_ROOT.'/base/AppCMDHandler.php',
+	    		'AppResult'=>CLASS_ROOT.'/base/AppResult.php',
 
 			//container
 				'ServerData' =>CLASS_ROOT.'/container/ServerData.php',
 				'MessageData' =>CLASS_ROOT.'/container/MessageData.php',
 				'ErrorObject'=>CLASS_ROOT.'/element/ErrorObject.php',
 				'ErrorConst'=>CLASS_ROOT.'/element/ErrorObject.php',
-				'GM_OpObject'=>CLASS_ROOT.'/element/GM_OpObject.php',
+				'CMDOpObject'=>CLASS_ROOT.'/element/CMDOpObject.php',
 				'ServerInfo'=>CLASS_ROOT.'/element/ServerInfo.php',
 					//static
 				'AppConst'=>CLASS_ROOT.'/static/AppConst.php',

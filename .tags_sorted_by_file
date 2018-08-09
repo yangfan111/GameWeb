@@ -1,0 +1,270 @@
+API_ROOT	callback\GM_Entrance.php	/^define('API_ROOT', dirname(__FILE__));$/;"	d
+GM_Entrance	callback\GM_Entrance.php	/^class GM_Entrance {$/;"	c
+checkRet	callback\GM_Entrance.php	/^		$checkRet = self::$gm_Checker->checkGMArgs($gmObject, self::$gm_Mgr);$/;"	v
+dataRet	callback\GM_Entrance.php	/^		$dataRet = self::$gm_Mgr->handleGMCmd($gmObject);$/;"	v
+finalResp	callback\GM_Entrance.php	/^		$finalResp = self::$gm_Result->wrapPostRet($processRet);$/;"	v
+finalRespJson	callback\GM_Entrance.php	/^		$finalRespJson = json_encode($finalResp);$/;"	v
+gmObject	callback\GM_Entrance.php	/^		$gmObject = json_decode($gmJson);$/;"	v
+gm_Checker	callback\GM_Entrance.php	/^	private static $gm_Checker; \/\/gm验证$/;"	v
+gm_Logger	callback\GM_Entrance.php	/^	private static $gm_Logger; \/\/gm logger$/;"	v
+gm_Mgr	callback\GM_Entrance.php	/^	private static $gm_Mgr; \/\/gm管理器$/;"	v
+gm_Result	callback\GM_Entrance.php	/^	private static $gm_Result; \/\/gm结果处理$/;"	v
+init	callback\GM_Entrance.php	/^	public static function init() {$/;"	f
+initialize	callback\GM_Entrance.php	/^	private static $initialize = false;$/;"	v
+process	callback\GM_Entrance.php	/^	public static function process($gmJson) {$/;"	f
+processRet	callback\GM_Entrance.php	/^		$processRet = self::realProcess($gmJson);$/;"	v
+realProcess	callback\GM_Entrance.php	/^	private static function realProcess($gmJson) {$/;"	f
+AppCMDHandler	callback\base\AppCMDHandler.php	/^class AppCMDHandler$/;"	c
+anonObj	callback\base\AppCMDHandler.php	/^		$anonObj = Util::anon_class();$/;"	v
+handle_clientWebData	callback\base\AppCMDHandler.php	/^	public static function handle_clientWebData($gmData,AppMgr $gm_Mgr)$/;"	f
+handle_message_disable	callback\base\AppCMDHandler.php	/^	public static function handle_message_disable($gmData,AppMgr $gm_Mgr)$/;"	f
+handle_message_push	callback\base\AppCMDHandler.php	/^	public static function handle_message_push($gmData,AppMgr $gm_Mgr)$/;"	f
+handle_server_changeGameServerState	callback\base\AppCMDHandler.php	/^	public static function handle_server_changeGameServerState($gmData,AppMgr $gm_Mgr){$/;"	f
+handle_server_getGameServerList	callback\base\AppCMDHandler.php	/^	public static function handle_server_getGameServerList($gmData,AppMgr $gm_Mgr){$/;"	f
+AppChecker	callback\base\AppChecker.php	/^class AppChecker{$/;"	c
+checkGMAcessState	callback\base\AppChecker.php	/^	public function checkGMAcessState(AppResult $gmResult)$/;"	f
+checkGMActionArgs	callback\base\AppChecker.php	/^	private function checkGMActionArgs($gmObject,AppMgr $gmMgr)$/;"	f
+checkGMArgs	callback\base\AppChecker.php	/^	public  function checkGMArgs($gmObject,AppMgr $gmMgr)$/;"	f
+gmData	callback\base\AppChecker.php	/^		$gmData = $gmObject->{'data'};$/;"	v
+handlerReqArgs	callback\base\AppChecker.php	/^		$handlerReqArgs = $mgr_handlerMap[$gmObject->{'action'}]->argNames;$/;"	v
+mgr_handlerMap	callback\base\AppChecker.php	/^		$mgr_handlerMap = $gmMgr->handlerMap;$/;"	v
+AppLogger	callback\base\AppLogger.php	/^class AppLogger {$/;"	c
+cmdTag	callback\base\AppLogger.php	/^		\/\/	$this->cmdTag = $cmdTag;$/;"	v
+cmdTag	callback\base\AppLogger.php	/^	private $cmdTag;$/;"	v
+fileName	callback\base\AppLogger.php	/^		$fileName = 'gm' . $this->uniqueTag . '.log';$/;"	v
+filePath	callback\base\AppLogger.php	/^		$filePath = Util::toFormatPath($fstFileDir . DIRECTORY_SEPARATOR . $scdFileDir . DIRECTORY_SEPARATOR .$subDir. DIRECTORY_SEPARATOR . $fileName);$/;"	v
+formatStr	callback\base\AppLogger.php	/^		$formatStr = date('[H:i:s]',time()) . "\\n" . '<' . $logFlag . '>' . "\\n";$/;"	v
+fstFileDir	callback\base\AppLogger.php	/^		$fstFileDir = dirname(dirname(__FILE__)) . AppConst::LOG_GM;$/;"	v
+init	callback\base\AppLogger.php	/^			$this->init = true;$/;"	v
+init	callback\base\AppLogger.php	/^	private $init = false;$/;"	v
+init_tag	callback\base\AppLogger.php	/^	public function init_tag() {$/;"	f
+scdFileDir	callback\base\AppLogger.php	/^		$scdFileDir = date("[Y-m-d]");$/;"	v
+subDir	callback\base\AppLogger.php	/^				$subDir = date("H").'h';$/;"	v
+subDir	callback\base\AppLogger.php	/^				$subDir = date("[Y-m-d]");$/;"	v
+subDir	callback\base\AppLogger.php	/^				$subDir = date("[Y-m]");$/;"	v
+subDir	callback\base\AppLogger.php	/^		$subDir = null; $/;"	v
+uniqueTag	callback\base\AppLogger.php	/^			$this->uniqueTag = date('[H-i-s]',time());$/;"	v
+uniqueTag	callback\base\AppLogger.php	/^	private $uniqueTag;$/;"	v
+writeClientLog	callback\base\AppLogger.php	/^	public function writeClientLog($gmJson, string $logFlag) {$/;"	f
+writeGMLog	callback\base\AppLogger.php	/^	public function writeGMLog($gmJson, $logFlag,$subDirMask=SubDirMask::HOUR) {$/;"	f
+writeTargetLog	callback\base\AppLogger.php	/^	public function writeTargetLog($testJson)$/;"	f
+AppMgr	callback\base\AppMgr.php	/^class AppMgr{$/;"	c
+__construct	callback\base\AppMgr.php	/^	function __construct(){$/;"	f
+checkCMD	callback\base\AppMgr.php	/^\/\/	public function checkCMD($gmObject){$/;"	f
+cmdConfigObj	callback\base\AppMgr.php	/^		$cmdConfigObj = Util::jsonFileDecode( dirname(dirname(__FILE__)). AppConst::GM_CMD_CONFIG);$/;"	v
+cmd_cltArgsObj	callback\base\AppMgr.php	/^		$cmd_cltArgsObj = $cmdConfigObj->client;$/;"	v
+cmd_gmArgsObj	callback\base\AppMgr.php	/^		$cmd_gmArgsObj = $cmdConfigObj->gm;$/;"	v
+dataArr	callback\base\AppMgr.php	/^		$dataArr =  Util::jsonFileDecode( dirname(dirname(__FILE__)). AppConst::MESSAGE_CONFIG);$/;"	v
+dataArr	callback\base\AppMgr.php	/^		$dataArr = Util::jsonFileDecode( dirname(dirname(__FILE__)). AppConst::SERVER_CONFIG);$/;"	v
+framework_config	callback\base\AppMgr.php	/^\/\/ $framework_config  = (object)array();$/;"	v
+gmData	callback\base\AppMgr.php	/^\/\/		$gmData = $gmObject->{'data'};$/;"	v
+handleGMCmd	callback\base\AppMgr.php	/^	public  function handleGMCmd($gmObject)$/;"	f
+handlerClass	callback\base\AppMgr.php	/^		$handlerClass = 'AppCMDHandler';$/;"	v
+handlerMap	callback\base\AppMgr.php	/^	public $handlerMap = array();\/\/处理接口$/;"	v
+handlerObject	callback\base\AppMgr.php	/^		$handlerObject = $this->handlerMap[$gmObject->{'action'}] ;$/;"	v
+handlerReqArgs	callback\base\AppMgr.php	/^\/\/		$handlerReqArgs = $this->handlerMap[$gmObject->{'action'}]->argNames;$/;"	v
+init	callback\base\AppMgr.php	/^	public function init()$/;"	f
+initConfig	callback\base\AppMgr.php	/^	private function initConfig(){$/;"	f
+key	callback\base\AppMgr.php	/^		foreach ($cmd_cltArgsObj as $key => $value) {$/;"	v
+key	callback\base\AppMgr.php	/^		foreach ($cmd_gmArgsObj as $key => $value) {$/;"	v
+messageData	callback\base\AppMgr.php	/^		$this->messageData = new MessageData($dataArr);$/;"	v
+messageData	callback\base\AppMgr.php	/^	public $messageData;\/\/消息实例$/;"	v
+register	callback\base\AppMgr.php	/^	public  function register(){$/;"	f
+ret	callback\base\AppMgr.php	/^		$ret = $handlerObject->call($gmObject->{'data'},$this);$/;"	v
+serverData	callback\base\AppMgr.php	/^		$this->serverData = new ServerData($dataArr);$/;"	v
+serverData	callback\base\AppMgr.php	/^	public $serverData; \/\/服务器数据实例$/;"	v
+AppResult	callback\base\AppResult.php	/^class AppResult {$/;"	c
+__print	callback\base\AppResult.php	/^	public function __print() {$/;"	f
+afterExc	callback\base\AppResult.php	/^	public function afterExc($gm_Logger, $gmJson) {$/;"	f
+beforeExc	callback\base\AppResult.php	/^	public function beforeExc($gm_Logger, $gmJson) {$/;"	f
+checkResultState	callback\base\AppResult.php	/^	public function checkResultState() {$/;"	f
+errObj	callback\base\AppResult.php	/^		$this->errObj = $eobj;$/;"	v
+errObj	callback\base\AppResult.php	/^		$this->errObj = ErrorObject::genErr($ecode);$/;"	v
+errObj	callback\base\AppResult.php	/^		$this->errObj = ErrorObject::genErr(1);$/;"	v
+errObj	callback\base\AppResult.php	/^		$this->errObj = null;$/;"	v
+errObj	callback\base\AppResult.php	/^	public $errObj;$/;"	v
+processRet	callback\base\AppResult.php	/^			$processRet = Util::anon_class();$/;"	v
+pushErrorCode	callback\base\AppResult.php	/^	public function pushErrorCode($ecode) {$/;"	f
+pushErrorObj	callback\base\AppResult.php	/^	public function pushErrorObj($eobj) {$/;"	f
+reqJson	callback\base\AppResult.php	/^		$this->reqJson= $gmJson;$/;"	v
+reqJson	callback\base\AppResult.php	/^	private $reqJson;$/;"	v
+resp	callback\base\AppResult.php	/^		$resp = array($/;"	v
+testExc	callback\base\AppResult.php	/^	public function testExc($gm_Logger,$testJson)$/;"	f
+webLockTag	callback\base\AppResult.php	/^		$this->webLockTag = false;$/;"	v
+webLockTag	callback\base\AppResult.php	/^		$this->webLockTag = true;$/;"	v
+webLockTag	callback\base\AppResult.php	/^	private $webLockTag = false;$/;"	v
+wrapPostRet	callback\base\AppResult.php	/^	public function wrapPostRet($processRet) {$/;"	f
+AppResult	callback\base\Mysql.php	/^class AppResult {$/;"	c
+__print	callback\base\Mysql.php	/^	public function __print() {$/;"	f
+afterExc	callback\base\Mysql.php	/^	public function afterExc($gm_Logger, $gmJson) {$/;"	f
+beforeExc	callback\base\Mysql.php	/^	public function beforeExc($gm_Logger, $gmJson) {$/;"	f
+checkResultState	callback\base\Mysql.php	/^	public function checkResultState() {$/;"	f
+errObj	callback\base\Mysql.php	/^		$this->errObj = $eobj;$/;"	v
+errObj	callback\base\Mysql.php	/^		$this->errObj = ErrorObject::genErr($ecode);$/;"	v
+errObj	callback\base\Mysql.php	/^		$this->errObj = ErrorObject::genErr(1);$/;"	v
+errObj	callback\base\Mysql.php	/^		$this->errObj = null;$/;"	v
+errObj	callback\base\Mysql.php	/^	public $errObj;$/;"	v
+processRet	callback\base\Mysql.php	/^			$processRet = Util::anon_class();$/;"	v
+pushErrorCode	callback\base\Mysql.php	/^	public function pushErrorCode($ecode) {$/;"	f
+pushErrorObj	callback\base\Mysql.php	/^	public function pushErrorObj($eobj) {$/;"	f
+resp	callback\base\Mysql.php	/^		$resp = array($/;"	v
+testExc	callback\base\Mysql.php	/^	public function testExc($gm_Logger,$testJson)$/;"	f
+webLockTag	callback\base\Mysql.php	/^		$this->webLockTag = false;$/;"	v
+webLockTag	callback\base\Mysql.php	/^		$this->webLockTag = true;$/;"	v
+webLockTag	callback\base\Mysql.php	/^	private $webLockTag = false;$/;"	v
+wrapPostRet	callback\base\Mysql.php	/^	public function wrapPostRet($processRet) {$/;"	f
+MessageData	callback\container\MessageData.php	/^class MessageData {$/;"	c
+__construct	callback\container\MessageData.php	/^	function __construct($messageDataArr) {$/;"	f
+anonObj	callback\container\MessageData.php	/^			$anonObj = Util::anon_class();$/;"	v
+anonObj	callback\container\MessageData.php	/^		$anonObj = Util::anon_class();$/;"	v
+deleteMessage	callback\container\MessageData.php	/^	public function deleteMessage($gmData)$/;"	f
+getCltMessageList	callback\container\MessageData.php	/^	public function getCltMessageList($langId)$/;"	f
+getGMMessageList	callback\container\MessageData.php	/^	public  function getGMMessageList()$/;"	f
+gmMsgArr	callback\container\MessageData.php	/^		$gmMsgArr = array();$/;"	v
+key	callback\container\MessageData.php	/^		foreach ($this->messageList as $key =>$value) {$/;"	v
+messageList	callback\container\MessageData.php	/^	public $messageList = array();$/;"	v
+messageSafeArr	callback\container\MessageData.php	/^			$messageSafeArr = array_map(function ($element) {$/;"	v
+messageSafeArr	callback\container\MessageData.php	/^		$messageSafeArr = array_map(function ($element) {$/;"	v
+modifyMessage	callback\container\MessageData.php	/^	public function modifyMessage($gmData) {$/;"	f
+msgId	callback\container\MessageData.php	/^		$msgId = $gmData->{'messageId'};$/;"	v
+msgInfo	callback\container\MessageData.php	/^			$msgInfo = $this->messageList[$msgId];$/;"	v
+msgInfo	callback\container\MessageData.php	/^			$msgInfo = new MessageInfo($gmData);$/;"	v
+msgInfo	callback\container\MessageData.php	/^		$msgInfo = null;$/;"	v
+msgObj	callback\container\MessageData.php	/^			$msgObj = $value->getCltObject($langId);$/;"	v
+ServerData	callback\container\ServerData.php	/^class ServerData{$/;"	c
+__construct	callback\container\ServerData.php	/^	function __construct($serverDataArr){$/;"	f
+changeServerState	callback\container\ServerData.php	/^	public function changeServerState($serverCode,$tarServerState)$/;"	f
+channelList	callback\container\ServerData.php	/^	public  $channelList =  array();$/;"	v
+getGMServerList	callback\container\ServerData.php	/^	public  function getGMServerList($channel = 'channel_DEV')$/;"	f
+gmSrvArr	callback\container\ServerData.php	/^		$gmSrvArr = array();$/;"	v
+serverList	callback\container\ServerData.php	/^	public  $serverList =  array();$/;"	v
+tarServerList	callback\container\ServerData.php	/^			$tarServerList= $this->channelList[$channel]->{'include'};$/;"	v
+tarServerList	callback\container\ServerData.php	/^		$tarServerList=array();$/;"	v
+jsonObj	callback\distribute.php	/^$jsonObj = file_get_contents('php:\/\/input');$/;"	v
+ret	callback\distribute.php	/^$ret = GM_Entrance::process($jsonObj);$/;"	v
+CMDOpObject	callback\element\CMDOpObject.php	/^    class CMDOpObject{$/;"	c
+__construct	callback\element\CMDOpObject.php	/^	function __construct($methodArr, $argNames,$tag) {$/;"	f
+abc	callback\element\CMDOpObject.php	/^	public function abc($a,$b){$/;"	f
+argNames	callback\element\CMDOpObject.php	/^		$this->argNames = $argNames;$/;"	v
+argNames	callback\element\CMDOpObject.php	/^	public $argNames;\/\/参数列表$/;"	v
+call	callback\element\CMDOpObject.php	/^	public function call($argArr,AppMgr $mgr)$/;"	f
+className	callback\element\CMDOpObject.php	/^	public $className;\/\/静态实例$/;"	v
+classObj	callback\element\CMDOpObject.php	/^	public $classObj;\/\/类实例 $/;"	v
+cmdName	callback\element\CMDOpObject.php	/^	\/\/  public $cmdName;\/\/命令$/;"	v
+methodName	callback\element\CMDOpObject.php	/^	public $methodName;\/\/处理函数$/;"	v
+tag	callback\element\CMDOpObject.php	/^		$this->tag =$tag;$/;"	v
+tag	callback\element\CMDOpObject.php	/^	public $tag;\/\/命令tag$/;"	v
+ErrorConst	callback\element\ErrorObject.php	/^class ErrorConst$/;"	c
+ErrorObject	callback\element\ErrorObject.php	/^class ErrorObject$/;"	c
+__construct	callback\element\ErrorObject.php	/^	function __construct($code) {$/;"	f
+__tostring	callback\element\ErrorObject.php	/^	function __tostring() {$/;"	f
+error_code	callback\element\ErrorObject.php	/^		$this->error_code = $code;$/;"	v
+error_code	callback\element\ErrorObject.php	/^	public $error_code;$/;"	v
+error_map	callback\element\ErrorObject.php	/^	public static $error_map = array($/;"	v
+error_msg	callback\element\ErrorObject.php	/^			$this->error_msg = "";$/;"	v
+error_msg	callback\element\ErrorObject.php	/^			$this->error_msg = ErrorConst::$error_map[$code];$/;"	v
+error_msg	callback\element\ErrorObject.php	/^	public $error_msg;$/;"	v
+genErr	callback\element\ErrorObject.php	/^	public static function genErr($code)$/;"	f
+toString	callback\element\ErrorObject.php	/^	function toString()$/;"	f
+GMEntry	callback\element\GMEntry.php	/^class GMEntry{$/;"	c
+GetGMObject	callback\element\GMEntry.php	/^public function GetGMObject()$/;"	f
+MessageBodyInfo	callback\element\GMEntry.php	/^class MessageBodyInfo extends GMEntry$/;"	c
+__construct	callback\element\GMEntry.php	/^function __construct($src) {$/;"	f
+content	callback\element\GMEntry.php	/^	public $content;$/;"	v
+languageID	callback\element\GMEntry.php	/^	public $languageID;$/;"	v
+modify	callback\element\GMEntry.php	/^public function modify($src)$/;"	f
+title	callback\element\GMEntry.php	/^	public $title;$/;"	v
+ItemInfo	callback\element\ItemInfo.php	/^class ItemInfo extends GMEntry$/;"	c
+itemCode	callback\element\ItemInfo.php	/^	public $itemCode;$/;"	v
+itemNum	callback\element\ItemInfo.php	/^	public $itemNum;$/;"	v
+GMEntry	callback\element\MessageBodyInfo.php	/^class GMEntry{$/;"	c
+__construct	callback\element\MessageBodyInfo.php	/^function __construct($src) {$/;"	f
+MessageInfo	callback\element\MessageInfo.php	/^class MessageInfo extends GMEntry$/;"	c
+_findLangBody	callback\element\MessageInfo.php	/^	private function _findLangBody($langId)$/;"	f
+channelCodeList	callback\element\MessageInfo.php	/^	public $channelCodeList;$/;"	v
+endTime	callback\element\MessageInfo.php	/^	public $endTime;$/;"	v
+filePath	callback\element\MessageInfo.php	/^	public $filePath;$/;"	v
+gameAppId	callback\element\MessageInfo.php	/^	public  $gameAppId = AppConst::APP_ID;$/;"	v
+gameServerCode	callback\element\MessageInfo.php	/^	public $gameServerCode;$/;"	v
+getCltObject	callback\element\MessageInfo.php	/^	function getCltObject($langId)$/;"	f
+getGMObject	callback\element\MessageInfo.php	/^\/\/	function getGMObject(){$/;"	f
+hasUserList	callback\element\MessageInfo.php	/^	public $hasUserList;$/;"	v
+intervalDay	callback\element\MessageInfo.php	/^	public $intervalDay;$/;"	v
+isGlobalSync	callback\element\MessageInfo.php	/^ 	public $isGlobalSync;$/;"	v
+itemList	callback\element\MessageInfo.php	/^	public $itemList;$/;"	v
+messageBodyList	callback\element\MessageInfo.php	/^	public $messageBodyList;\/\/消息体列表$/;"	v
+messageDetailUrl	callback\element\MessageInfo.php	/^	public $messageDetailUrl;$/;"	v
+messageId	callback\element\MessageInfo.php	/^	public  $messageId;$/;"	v
+messageName	callback\element\MessageInfo.php	/^	public  $messageName;$/;"	v
+playerCount	callback\element\MessageInfo.php	/^	public $playerCount;$/;"	v
+publishTypeCode	callback\element\MessageInfo.php	/^	public $publishTypeCode;$/;"	v
+receiveType	callback\element\MessageInfo.php	/^	public $receiveType;$/;"	v
+serverCodeList	callback\element\MessageInfo.php	/^	public $serverCodeList;$/;"	v
+startTime	callback\element\MessageInfo.php	/^	public $startTime;$/;"	v
+ServerInfo	callback\element\ServerInfo.php	/^class ServerInfo extends GMEntry$/;"	c
+__construct	callback\element\ServerInfo.php	/^\/\/	function __construct($serverData) {$/;"	f
+gameAppId	callback\element\ServerInfo.php	/^	public  $gameAppId = AppConst::APP_ID;$/;"	v
+gameServerCode	callback\element\ServerInfo.php	/^	public  $gameServerCode;$/;"	v
+gameServerCode	callback\element\ServerInfo.php	/^\/\/		$this->gameServerCode = $serverData->gameServerCode;$/;"	v
+gameServerName	callback\element\ServerInfo.php	/^	public  $gameServerName;$/;"	v
+gameServerName	callback\element\ServerInfo.php	/^\/\/		$this->gameServerName = $serverData->gameServerName;$/;"	v
+gameServerState	callback\element\ServerInfo.php	/^	public  $gameServerState = ServerState::NORMAL;$/;"	v
+url	callback\element\ServerInfo.php	/^	public  $url;$/;"	v
+url	callback\element\ServerInfo.php	/^\/\/		$this->url = $serverData->url;$/;"	v
+AppConst	callback\static\AppConst.php	/^class AppConst {$/;"	c
+GMMsgCMD	callback\static\AppConst.php	/^\/\/ class GMMsgCMD$/;"	c
+GM_GlobalType	callback\static\AppConst.php	/^class GM_GlobalType {$/;"	c
+GM_MessageRecType	callback\static\AppConst.php	/^class GM_MessageRecType {$/;"	c
+GM_MessageType	callback\static\AppConst.php	/^class GM_MessageType {$/;"	c
+ServerState	callback\static\AppConst.php	/^class ServerState {$/;"	c
+SubDirMask	callback\static\AppConst.php	/^class SubDirMask{$/;"	c
+AppRegistry	callback\static\AppRegistry.php	/^class AppRegistry$/;"	c
+CLASS_ROOT	callback\static\AppRegistry.php	/^define('CLASS_ROOT', dirname(dirname(__FILE__)));$/;"	d
+classArr	callback\static\AppRegistry.php	/^			$classArr	=  array($/;"	v
+excute	callback\static\AppRegistry.php	/^	public static function excute()$/;"	f
+registryInit	callback\static\AppRegistry.php	/^	private static $registryInit = false;$/;"	v
+AppScriptLoader	callback\static\AppScriptLoader.php	/^class AppScriptLoader$/;"	c
+_coreClasses	callback\static\AppScriptLoader.php	/^\/\/	private static $_coreClasses = array($/;"	v
+autoLoad	callback\static\AppScriptLoader.php	/^	public static function autoLoad($className) {$/;"	f
+classMap	callback\static\AppScriptLoader.php	/^	private static $classMap = array();$/;"	v
+name	callback\static\AppScriptLoader.php	/^		foreach ($class_arr as $name => $path) {$/;"	v
+registerClass	callback\static\AppScriptLoader.php	/^	public static function registerClass($class_arr) {$/;"	f
+Util	callback\static\Util.php	/^class Util {$/;"	c
+anon_class	callback\static\Util.php	/^	public static function anon_class() {$/;"	f
+arr	callback\static\Util.php	/^		$arr = is_object($obj) ? get_object_vars($obj) : $obj;$/;"	v
+arrayToObject	callback\static\Util.php	/^	public static function arrayToObject($arr) {$/;"	f
+arrayToSpecificObject	callback\static\Util.php	/^	public static function arrayToSpecificObject($arr, $className, $classObj = null) {$/;"	f
+asMutiplyArg	callback\static\Util.php	/^	public static function callStaticMethod($className, $methodName, $argArr, $asMutiplyArg = false) {$/;"	v
+callObjMethod	callback\static\Util.php	/^	public static function callObjMethod($obj, $methodName, $argArr, $isMulArg = false) {$/;"	f
+callStaticMethod	callback\static\Util.php	/^	public static function callStaticMethod($className, $methodName, $argArr, $asMutiplyArg = false) {$/;"	f
+charid	callback\static\Util.php	/^	\/\/ 	$charid = strtoupper(md5(uniqid(mt_rand(), true)));$/;"	v
+classObj	callback\static\Util.php	/^			$classObj = new $className;$/;"	v
+classObj	callback\static\Util.php	/^	public static function arrayToSpecificObject($arr, $className, $classObj = null) {$/;"	v
+fileJsonData	callback\static\Util.php	/^		$fileJsonData = json_encode($fileData);$/;"	v
+fileRawData	callback\static\Util.php	/^		$fileRawData = file_get_contents($filePath);$/;"	v
+filterStr	callback\static\Util.php	/^		$filterStr=strrchr($path, DIRECTORY_SEPARATOR);$/;"	v
+funcReflection	callback\static\Util.php	/^		$funcReflection = new \\ReflectionFunction($funcRef);$/;"	v
+genUuid	callback\static\Util.php	/^	public static function genUuid() {$/;"	f
+generateNum	callback\static\Util.php	/^	\/\/ public static function generateNum() {$/;"	f
+getFunctionReflectInfo	callback\static\Util.php	/^	public static function getFunctionReflectInfo($funcRef) {$/;"	f
+isMulArg	callback\static\Util.php	/^	public static function callObjMethod($obj, $methodName, $argArr, $isMulArg = false) {$/;"	v
+jsonFileDecode	callback\static\Util.php	/^	public static function jsonFileDecode($filePath) {$/;"	f
+jsonFileEncode	callback\static\Util.php	/^	public static function jsonFileEncode($fileData, $filename) {$/;"	f
+key	callback\static\Util.php	/^		foreach ($arr as $key => $value) {$/;"	v
+key	callback\static\Util.php	/^		foreach ($objSrc as $key => $value) {$/;"	v
+makeDir	callback\static\Util.php	/^	public static function makeDir($srcPath, $mode = 0777, $exclusive = true) {$/;"	f
+mode	callback\static\Util.php	/^	public static function makeDir($srcPath, $mode = 0777, $exclusive = true) {$/;"	v
+objectDeepClone	callback\static\Util.php	/^	public static function objectDeepClone($objSrc, $objTar) {$/;"	f
+objectToArray	callback\static\Util.php	/^	public static function objectToArray($obj) {$/;"	f
+srcPath	callback\static\Util.php	/^		$srcPath = Util::toFormatPath($srcPath);$/;"	v
+tarDirPath	callback\static\Util.php	/^		$tarDirPath = self::toPureDir($srcPath);$/;"	v
+toFormatPath	callback\static\Util.php	/^	public static function toFormatPath($srcPath) {$/;"	f
+toJsonStr	callback\static\Util.php	/^	public static function toJsonStr($objOrArr) {$/;"	f
+toPureDir	callback\static\Util.php	/^	public static function toPureDir($path) {$/;"	f
+uuid	callback\static\Util.php	/^	\/\/ 	$uuid = substr($charid, 0, 8) . substr($charid, 8, 4) . substr($charid, 12, 4) . substr($charid, 16, 4) . substr($charid, 20, 12);$/;"	v
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/

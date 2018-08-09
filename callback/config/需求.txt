@@ -1,0 +1,7 @@
+1.客户端访问规则：
+	· 域名后面文件地址映射到项目根目录/src/controller/
+	· 首个目录名称对应/src/controller/文件名
+	· 第二个目录名称对应/src/controller/对应文件中具体函数
+	· 示例：https://wd-test.shinezone.com/account/fastcreate对应项目根目录/src/controller目录下account.ts文件
+2.gm服务访问规则：
+	固定访问路径https://wd-test.shinezone.com/callback/distribute.php
